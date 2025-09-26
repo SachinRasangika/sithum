@@ -1,0 +1,535 @@
+/* New sections styles for Gallery, When to go, and Pricing */
+
+/* Gallery Section - What you'll see */
+.gallery-content {
+  padding: 80px 0;
+}
+
+.gallery-carousel-container {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  border-top: 1px solid rgba(3, 9, 34, 0.08);
+  border-bottom: 1px solid rgba(3, 9, 34, 0.08);
+}
+
+.gallery-images-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gallery-images-track {
+  display: flex;
+  width: 500%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.gallery-carousel-image {
+  width: 20%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.gallery-nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid rgba(3, 9, 34, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+.gallery-nav-button:hover {
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-nav-prev {
+  left: -40px;
+}
+
+.gallery-nav-next {
+  right: -40px;
+}
+
+/* When to go Section */
+.when-to-go-content {
+  padding: 80px 0;
+}
+
+.month-tabs-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 0;
+  padding: 0 131px;
+  border-top: 1px solid rgba(3, 9, 34, 0.08);
+  border-bottom: 1px solid rgba(3, 9, 34, 0.08);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.month-tab {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #11121A;
+  background: transparent;
+  color: #222;
+  font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.month-tab.active {
+  background: #030922;
+  color: #fff;
+  border-color: #030922;
+}
+
+.month-tab:hover:not(.active) {
+  background: #f5f5f5;
+}
+
+.month-tab::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  padding: 2px;
+  background: conic-gradient(from 0deg, transparent 0deg, #11121A 12deg, transparent 24deg);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0.5;
+}
+
+.weather-info-container {
+  border-top: 1px solid rgba(3, 9, 34, 0.08);
+  padding-top: 30px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.weather-stats {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.weather-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.stat-label {
+  font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #787878;
+  letter-spacing: 0.5px;
+}
+
+.stat-value-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border-radius: 48px;
+  background: #FCF8F7;
+}
+
+.temp-icon,
+.rain-icon {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-value {
+  font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.temp-value {
+  color: #FF6275;
+}
+
+.rain-value {
+  color: #62B4FF;
+}
+
+.weather-description {
+  max-width: 1051px;
+  text-align: center;
+}
+
+.weather-description p {
+  font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0.66px;
+  color: #030922;
+  margin: 0;
+}
+
+/* Pricing Section */
+.prices-content {
+  padding: 80px 0;
+  background: #FCF8F7;
+  margin: 0;
+}
+
+.pricing-subtitle {
+  font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0.66px;
+  color: #030922;
+  margin: 0 0 50px 0;
+}
+
+.pricing-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.pricing-table {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.pricing-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 40px;
+  border-bottom: 1px solid rgba(3, 9, 34, 0.08);
+  min-height: 100px;
+}
+
+.pricing-row:last-of-type {
+  border-bottom: none;
+}
+
+.period {
+  font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #030922;
+}
+
+.price {
+  font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.5px;
+  color: #030922;
+}
+
+.enquire-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 30px;
+  border: 1px solid rgba(3, 9, 34, 0.15);
+  background: transparent;
+  font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #030922;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.enquire-button:hover {
+  background: #030922;
+  color: #fff;
+  border-color: #030922;
+}
+
+.pricing-disclaimer {
+  font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #787878;
+  margin: 40px 0 0 0;
+  padding: 0 40px;
+}
+
+.inclusions-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.inclusions-block,
+.exclusions-block {
+  border: 1px solid #FF6275;
+  background: #fff;
+  padding: 30px 24px;
+}
+
+.inclusions-title,
+.exclusions-title {
+  font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #030922;
+  margin: 0 0 20px 0;
+}
+
+.inclusions-list,
+.exclusions-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inclusions-list li,
+.exclusions-list li {
+  font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+  color: #030922;
+  padding-left: 24px;
+  position: relative;
+}
+
+.inclusions-list li::before,
+.exclusions-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 20px;
+  color: #030922;
+}
+
+/* Responsive Design for New Sections */
+@media (max-width: 1440px) {
+  .month-tabs-container {
+    padding: 40px 60px;
+    gap: 20px;
+  }
+  
+  .pricing-layout {
+    gap: 60px;
+  }
+  
+  .prices-content {
+    margin: 0 -100px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .gallery-carousel-container {
+    height: 500px;
+  }
+  
+  .gallery-nav-prev {
+    left: 20px;
+  }
+  
+  .gallery-nav-next {
+    right: 20px;
+  }
+  
+  .gallery-nav-button {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .month-tabs-container {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 30px 60px;
+  }
+  
+  .month-tab {
+    width: 60px;
+    height: 60px;
+    font-size: 12px;
+  }
+  
+  .weather-stats {
+    gap: 40px;
+  }
+  
+  .pricing-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .prices-content {
+    margin: 0 -60px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  
+  .pricing-row {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .enquire-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-carousel-container {
+    height: 350px;
+  }
+  
+  .gallery-nav-button {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .month-tabs-container {
+    padding: 20px;
+    gap: 10px;
+  }
+  
+  .month-tab {
+    width: 50px;
+    height: 50px;
+    font-size: 11px;
+  }
+  
+  .weather-stats {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .weather-description {
+    padding: 0 20px;
+  }
+  
+  .prices-content {
+    margin: 0 -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .pricing-row {
+    padding: 15px;
+  }
+  
+  .period {
+    font-size: 14px;
+  }
+  
+  .price {
+    font-size: 17px;
+  }
+  
+  .enquire-button {
+    padding: 15px 20px;
+    font-size: 14px;
+  }
+  
+  .inclusions-block,
+  .exclusions-block {
+    padding: 20px 16px;
+  }
+  
+  .inclusions-list li,
+  .exclusions-list li {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-carousel-container {
+    height: 250px;
+  }
+  
+  .gallery-nav-button {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .month-tab {
+    width: 45px;
+    height: 45px;
+    font-size: 10px;
+  }
+  
+  .weather-description p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  
+  .period {
+    font-size: 13px;
+  }
+  
+  .price {
+    font-size: 16px;
+  }
+  
+  .inclusions-list li,
+  .exclusions-list li {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
