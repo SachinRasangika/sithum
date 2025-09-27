@@ -28,7 +28,6 @@ export default function HeroBanner() {
         <div className="hero-content-card" role="region" aria-label="Intro">
           <div className="hero-heading-group">
             <p className="hero-subcaption">DISCOVER THE PEARL OF THE INDIAN OCEAN</p>
-            <h1 className="hero-title">Explore Sri Lanka, Your Way</h1>
             <p className="hero-subtitle">Private, luxury tours designed around you — beaches, tea country, wildlife and culture in one unforgettable journey.</p>
           </div>
 
