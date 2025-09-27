@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/sithum/static/css/main.d03913e4.css",
-    "main.js": "/sithum/static/js/main.4f3a408f.js",
+    "main.css": "/sithum/static/css/main.8b77fedb.css",
+    "main.js": "/sithum/static/js/main.c05b217f.js",
     "static/js/511.df20e534.chunk.js": "/sithum/static/js/511.df20e534.chunk.js",
     "static/media/package-placeholder.svg": "/sithum/static/media/package-placeholder.1a221555c922194526bfb1392b9ccf7b.svg",
     "index.html": "/sithum/index.html",
-    "main.d03913e4.css.map": "/sithum/static/css/main.d03913e4.css.map",
-    "main.4f3a408f.js.map": "/sithum/static/js/main.4f3a408f.js.map",
+    "main.8b77fedb.css.map": "/sithum/static/css/main.8b77fedb.css.map",
+    "main.c05b217f.js.map": "/sithum/static/js/main.c05b217f.js.map",
     "511.df20e534.chunk.js.map": "/sithum/static/js/511.df20e534.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d03913e4.css",
-    "static/js/main.4f3a408f.js"
+    "static/css/main.8b77fedb.css",
+    "static/js/main.c05b217f.js"
   ]
 }
