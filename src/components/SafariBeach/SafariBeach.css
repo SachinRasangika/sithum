@@ -24,417 +24,194 @@
   width: 1242px;
   height: 782px;
   background: #FCF8F7;
+  border-radius: 24px;
   z-index: 1;
 }
 
-.safari-beach-content {
+/* New structured layout */
+.safari-beach-layout {
   position: relative;
-  width: 100%;
-  height: 782px;
   z-index: 2;
-}
-
-.safari-beach-images {
-  position: relative;
-  width: 1025px;
-  height: 582px;
-  margin-top: 100px;
-}
-
-.safari-beach-main-image {
-  position: absolute;
-  top: 0;
-  left: -2px;
-  width: 1030px;
-  height: 585px;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.safari-beach-couple-link {
-  position: absolute;
-  top: 177px;
-  left: 399px;
-  width: 228px;
-  height: 228px;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 72px;
   align-items: center;
-  z-index: 3;
-  cursor: pointer;
 }
 
-.safari-beach-couple-image {
-  width: 228px;
-  height: 228px;
-  object-fit: cover;
-  border-radius: 50%;
+/* Copy column */
+.safari-beach-copy { max-width: 560px; }
+
+.safari-beach-eyebrow {
+  margin: 0 0 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #787878;
 }
 
-.safari-beach-text-content {
-  position: absolute;
-  top: 194px;
-  right: 0;
-  width: 359px;
-  text-align: center;
-  z-index: 4;
-}
-
-.safari-beach-header {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 28px;
-  margin-bottom: 60px;
-}
-
-.safari-beach-title {
+.safari-beach-heading {
+  margin: 0 0 18px;
   font-family: 'Georgia', serif;
-  font-size: 41.488px;
+  font-size: clamp(28px, 2.6vw, 44px);
   font-weight: 400;
-  line-height: 51.56px;
+  line-height: 1.24;
   letter-spacing: 0.2px;
   color: #030922;
-  text-align: center;
-  margin: 0;
-  width: 288px;
-  min-height: 156px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
-.decorative-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 28px;
-  height: 28px;
-  flex-shrink: 0;
-}
-
-.decorative-icon svg {
-  width: 28px;
-  height: 28px;
-}
-
-.safari-beach-description {
+.safari-beach-subtext {
+  margin: 0 0 28px;
   font-family: 'Inter', sans-serif;
   font-size: 17.188px;
   font-weight: 300;
   line-height: 29px;
   letter-spacing: 0.66px;
   color: #787878;
-  text-align: center;
-  margin: 0 0 80px 0;
-  width: 359px;
-  height: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
-.safari-beach-cta-button {
+.safari-beach-highlights {
+  list-style: none;
+  margin: 0 0 36px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.highlight-item { display: flex; align-items: center; gap: 12px; }
+.highlight-icon { display: inline-flex; width: 24px; height: 24px; }
+.highlight-text { font-family: 'Inter', sans-serif; font-size: 15px; color: #030922; }
+
+.safari-beach-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.safari-beach-cta-primary,
+.safari-beach-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  padding: 0 28px;
+  border-radius: 999px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.safari-beach-cta-primary {
+  background: #030922;
+  color: #ffffff;
+  border: 1px solid #030922;
+}
+
+.safari-beach-cta-primary:hover { filter: brightness(1.08); }
+
+.safari-beach-cta-secondary {
+  background: transparent;
+  color: #030922;
+  border: 1px solid rgba(217, 217, 217, 0.50);
+}
+
+.safari-beach-cta-secondary:hover { background: #030922; color: #ffffff; border-color: #030922; }
+
+.safari-beach-cta-primary:focus-visible,
+.safari-beach-cta-secondary:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(3, 9, 34, 0.2);
+}
+
+/* Gallery column */
+.safari-beach-gallery {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.gallery-main { grid-column: 1 / 2; }
+.gallery-side { grid-column: 2 / 3; display: grid; gap: 16px; grid-auto-rows: 1fr; }
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(3, 9, 34, 0.06);
+}
+
+/* Circular badge */
+.safari-beach-badge {
+  position: absolute;
+  left: -24px;
+  bottom: -32px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(217, 217, 217, 0.50);
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 236px;
-  height: 62px;
-  padding: 0 40px;
-  border: 1px solid rgba(217, 217, 217, 0.50);
-  background: transparent;
-  font-family: 'Inter', sans-serif;
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 0.15px;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  color: #030922;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(3, 9, 34, 0.08);
 }
 
-.safari-beach-cta-button:hover {
-  background: #030922;
-  color: #ffffff;
-  border-color: #030922;
+.badge-ring {
+  position: absolute;
+  inset: 12px;
+  border-radius: 50%;
+  border: 1px dashed rgba(3, 9, 34, 0.25);
 }
+
+.badge-content { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 4px; }
+.badge-title { font-family: 'Georgia', serif; font-size: 16px; color: #030922; font-weight: 400; }
+.badge-sub { font-family: 'Inter', sans-serif; font-size: 12px; color: #787878; letter-spacing: 1px; text-transform: uppercase; }
 
 /* Responsive Styles */
 
 /* Large Desktop */
 @media (max-width: 1440px) {
-  .safari-beach-container {
-    padding: 0 120px;
-  }
-  
-  .safari-beach-background {
-    right: 120px;
-    width: calc(100% - 240px);
-    max-width: 1000px;
-  }
-  
-  .safari-beach-images {
-    width: 90%;
-    max-width: 900px;
-  }
-  
-  .safari-beach-main-image {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1030/585;
-  }
-  
-  .safari-beach-couple-link {
-    left: 35%;
-    top: 30%;
-  }
-  
-  .safari-beach-text-content {
-    right: 120px;
-    width: 320px;
-  }
-  
-  .safari-beach-title {
-    font-size: 36px;
-    line-height: 46px;
-    width: 100%;
-  }
-  
-  .safari-beach-description {
-    font-size: 16px;
-    line-height: 26px;
-    width: 100%;
-    height: auto;
-  }
+  .safari-beach-container { padding: 0 120px; }
+  .safari-beach-background { right: 120px; width: calc(100% - 240px); max-width: 1000px; }
+  .safari-beach-layout { gap: 56px; grid-template-columns: 1fr 1fr; }
 }
 
 /* Tablet Styles */
 @media (max-width: 1024px) {
-  .safari-beach-section {
-    padding: 80px 0;
-    min-height: 800px;
-  }
-  
-  .safari-beach-container {
-    padding: 0 60px;
-  }
-  
-  .safari-beach-background {
-    position: static;
-    width: 100%;
-    height: 400px;
-    margin-bottom: 40px;
-  }
-  
-  .safari-beach-content {
-    position: static;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-  }
-  
-  .safari-beach-images {
-    position: static;
-    width: 100%;
-    height: 400px;
-    margin-top: 0;
-  }
-  
-  .safari-beach-main-image {
-    position: static;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  .safari-beach-couple-link {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 180px;
-    height: 180px;
-  }
-  
-  .safari-beach-couple-image {
-    width: 180px;
-    height: 180px;
-  }
-  
-  .safari-beach-text-content {
-    position: static;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  
-  .safari-beach-header {
-    gap: 20px;
-    margin-bottom: 40px;
-  }
-  
-  .safari-beach-title {
-    font-size: 32px;
-    line-height: 42px;
-    width: auto;
-    min-height: auto;
-  }
-  
-  .safari-beach-description {
-    font-size: 16px;
-    line-height: 26px;
-    margin-bottom: 40px;
-    width: 100%;
-    height: auto;
-  }
-  
-  .safari-beach-cta-button {
-    width: 200px;
-    height: 55px;
-    font-size: 14px;
-  }
+  .safari-beach-section { padding: 80px 0; min-height: 800px; }
+  .safari-beach-container { padding: 0 60px; }
+  .safari-beach-background { position: static; width: 100%; height: 400px; margin: 0 0 40px; }
+  .safari-beach-layout { display: flex; flex-direction: column; gap: 32px; }
+  .safari-beach-copy { max-width: 640px; margin: 0 auto; text-align: center; }
+  .safari-beach-highlights { grid-template-columns: 1fr 1fr; }
+  .safari-beach-actions { justify-content: center; }
+  .safari-beach-gallery { grid-template-columns: 1fr; }
+  .gallery-main { grid-column: auto; }
+  .gallery-side { grid-column: auto; grid-auto-rows: 220px; }
+  .safari-beach-badge { left: auto; right: 20px; bottom: -24px; width: 160px; height: 160px; }
 }
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-  .safari-beach-section {
-    padding: 60px 0;
-    min-height: auto;
-  }
-  
-  .safari-beach-container {
-    padding: 0 20px;
-  }
-  
-  .safari-beach-background {
-    height: 300px;
-    margin-bottom: 30px;
-  }
-  
-  .safari-beach-content {
-    gap: 30px;
-  }
-  
-  .safari-beach-images {
-    height: 300px;
-  }
-  
-  .safari-beach-couple-link {
-    width: 140px;
-    height: 140px;
-  }
-  
-  .safari-beach-couple-image {
-    width: 140px;
-    height: 140px;
-  }
-  
-  .safari-beach-header {
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 30px;
-  }
-  
-  .decorative-icon {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .decorative-icon svg {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .safari-beach-title {
-    font-size: 28px;
-    line-height: 36px;
-    order: 1;
-  }
-  
-  .decorative-icon-left {
-    order: 0;
-  }
-  
-  .decorative-icon-right {
-    order: 2;
-  }
-  
-  .safari-beach-description {
-    font-size: 15px;
-    line-height: 24px;
-    margin-bottom: 30px;
-  }
-  
-  .safari-beach-cta-button {
-    width: 180px;
-    height: 50px;
-    font-size: 13px;
-    padding: 0 20px;
-  }
+  .safari-beach-section { padding: 60px 0; min-height: auto; }
+  .safari-beach-container { padding: 0 20px; }
+  .safari-beach-background { height: 300px; margin: 0 0 30px; }
+  .safari-beach-copy { text-align: left; }
+  .safari-beach-highlights { grid-template-columns: 1fr; }
+  .safari-beach-gallery { gap: 12px; }
+  .gallery-side { grid-auto-rows: 180px; }
+  .safari-beach-badge { width: 140px; height: 140px; right: 8px; bottom: -18px; }
 }
 
 /* Extra small mobile */
 @media (max-width: 480px) {
-  .safari-beach-section {
-    padding: 40px 0;
-  }
-  
-  .safari-beach-container {
-    padding: 0 15px;
-  }
-  
-  .safari-beach-background {
-    height: 250px;
-  }
-  
-  .safari-beach-images {
-    height: 250px;
-  }
-  
-  .safari-beach-couple-link {
-    width: 120px;
-    height: 120px;
-  }
-  
-  .safari-beach-couple-image {
-    width: 120px;
-    height: 120px;
-  }
-  
-  .safari-beach-header {
-    gap: 10px;
-    margin-bottom: 25px;
-  }
-  
-  .decorative-icon {
-    width: 20px;
-    height: 20px;
-  }
-  
-  .decorative-icon svg {
-    width: 20px;
-    height: 20px;
-  }
-  
-  .safari-beach-title {
-    font-size: 24px;
-    line-height: 32px;
-  }
-  
-  .safari-beach-description {
-    font-size: 14px;
-    line-height: 22px;
-    margin-bottom: 25px;
-  }
-  
-  .safari-beach-cta-button {
-    width: 160px;
-    height: 45px;
-    font-size: 12px;
-  }
+  .safari-beach-section { padding: 40px 0; }
+  .safari-beach-container { padding: 0 15px; }
+  .safari-beach-background { height: 250px; }
+  .gallery-side { grid-auto-rows: 150px; }
+  .safari-beach-badge { width: 120px; height: 120px; right: 6px; bottom: -14px; }
 }

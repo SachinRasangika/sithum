@@ -7,7 +7,7 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      text: "I couldn't recommend Nelson Travel more highly - we had the most amazing holiday - every detail had been thought about and they were always on hand to answer any questions straight away. Very personal service.",
+      text: "I couldn't recommend Sithuma Travel more highly - we had the most amazing holiday - every detail had been thought about and they were always on hand to answer any questions straight away. Very personal service.",
       name: "Camilla",
       rating: 5
     },
@@ -19,7 +19,7 @@ const Testimonials = () => {
     },
     {
       id: 3,
-      text: "Fantastic customer service. Super friendly team and no question unanswered and no request too small. Really appreciated how they co-ordinated my family throughout the planning phase. Thank you Nelson Travel.",
+      text: "Fantastic customer service. Super friendly team and no question unanswered and no request too small. Really appreciated how they co-ordinated my family throughout the planning phase. Thank you Sithuma Travel.",
       name: "Jamie", 
       rating: 5
     }

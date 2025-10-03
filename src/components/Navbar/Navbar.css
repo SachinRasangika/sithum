@@ -39,17 +39,32 @@
 .logo-icons { display: flex; align-items: center; gap: 52px; }
 .logo-icon { width: 19px; height: 17px; }
 .main-logo { width: 42px; height: 42px; }
+.brand-lockup { display: inline-flex; align-items: center; gap: 16px; text-decoration: none; }
+.brand-lockup:focus-visible { outline: 2px solid #030922; outline-offset: 3px; border-radius: 8px; }
+.brand-word { font-family: 'Georgia', serif; font-size: 24px; letter-spacing: 6px; text-transform: uppercase; color: #030922; }
 
-/* Right side - Search and Enquire */
+/* Right side - Search and Controls */
 .navbar-right { display: flex; align-items: center; gap: 10px; }
 .search-button { width: 60px; height: 60px; border-radius: 60px; border: 1px solid #030922; background: transparent; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; }
 .search-button:hover { background-color: #030922; }
 .search-button:hover svg path { stroke: #ffffff; }
-.enquire-button { display: flex; align-items: center; gap: 20px; padding: 9px 9px 9px 21px; border-radius: 50px; border: 1px solid #030922; background: transparent; cursor: pointer; transition: all 0.3s ease; min-width: 164px; height: 58px; text-decoration: none; }
-.enquire-button span { color: #030922; font-size: 16px; font-weight: 400; letter-spacing: 0.875px; text-transform: uppercase; }
-.enquire-button svg { width: 40px; height: 40px; }
-.enquire-button:hover { background-color: #030922; }
-.enquire-button:hover span { color: #ffffff; }
+
+/* Pill dropdowns (Language / Currency) */
+.pill-select-group { display: flex; align-items: center; gap: 10px; }
+.pill-select { position: relative; }
+.pill-trigger { display: inline-flex; align-items: center; gap: 10px; padding: 9px 16px; height: 58px; border-radius: 50px; border: 1px solid #030922; background: transparent; cursor: pointer; transition: all .3s ease; }
+.pill-trigger:focus-visible { outline: 2px solid #030922; outline-offset: 2px; }
+.pill-label { color: #030922; font-size: 14px; font-weight: 400; letter-spacing: .8px; text-transform: uppercase; }
+.pill-value { color: #030922; font-size: 14px; font-weight: 600; letter-spacing: .6px; }
+.pill-caret { color: #030922; }
+.pill-icon svg { display: block; }
+.pill-trigger:hover { background: #030922; }
+.pill-trigger:hover .pill-label, .pill-trigger:hover .pill-value, .pill-trigger:hover .pill-caret { color: #fff; }
+.pill-trigger:hover .pill-icon svg path { stroke: #ffffff; }
+.pill-menu { position: absolute; top: calc(100% + 6px); left: 0; min-width: 160px; background: #ffffff; border: 1px solid #030922; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,.2); padding: 8px; display: none; z-index: 1001; }
+.pill-select.is-open .pill-menu { display: block; }
+.pill-option { width: 100%; text-align: left; padding: 10px 12px; border: 0; background: transparent; cursor: pointer; border-radius: 8px; color: #030922; font-size: 14px; letter-spacing: .4px; }
+.pill-option:hover, .pill-option.is-active { background: #F5F7FA; }
 
 /* Bottom section with dark navy background */
 .navbar-bottom { background-color: #030922; position: relative; }
@@ -78,8 +93,13 @@
 .drawer-links { display: flex; flex-direction: column; padding: 10px; gap: 6px; }
 .drawer-links a { padding: 12px 10px; border-radius: 8px; color: #030922; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 14px; text-transform: uppercase; letter-spacing: .8px; }
 .drawer-links a:hover { background: #F5F7FA; }
-.drawer-cta { margin: auto 10px 16px; display: flex; align-items: center; justify-content: center; height: 50px; border-radius: 999px; border: 1px solid #030922; color: #030922; text-decoration: none; text-transform: uppercase; letter-spacing: .8px; font-size: 14px; }
-.drawer-cta:hover { background: #030922; color: #fff; }
+
+/* Drawer language/currency controls */
+.drawer-controls { margin: auto 10px 16px; display: grid; gap: 10px; }
+.drawer-select-group { display: grid; gap: 6px; }
+.drawer-select-label { font-family: 'Inter', sans-serif; font-size: 12px; color: #030922; text-transform: uppercase; letter-spacing: .8px; }
+.drawer-select { height: 48px; border-radius: 999px; border: 1px solid #030922; background: #ffffff; color: #030922; padding: 0 12px; font-family: 'Inter', sans-serif; font-size: 14px; }
+.drawer-select:focus { outline: 2px solid #030922; outline-offset: 2px; }
 
 /* Responsive */
 @media (max-width: 1024px) {
@@ -87,6 +107,8 @@
   .nav-links { gap: 40px; }
   .navbar-left { gap: 15px; }
   .logo-icons { gap: 30px; }
+  .brand-lockup { gap: 14px; }
+  .brand-word { font-size: 20px; letter-spacing: 5px; }
   .navbar-right { gap: 8px; }
   .enquire-button { min-width: 140px; padding: 9px 9px 9px 16px; }
   .nav-item span { font-size: 14px; }
@@ -100,6 +122,8 @@
   .nav-links { gap: 30px; }
   .navbar-left { gap: 12px; }
   .logo-icons { gap: 20px; }
+  .brand-lockup { gap: 12px; }
+  .brand-word { font-size: 18px; letter-spacing: 4px; }
   .hamburger-icon { width: 50px; height: 50px; }
   .main-logo { width: 36px; height: 36px; }
   .logo-icon { width: 16px; height: 14px; }
@@ -115,6 +139,8 @@
   .navbar-top-content { padding: 0 10px; }
   .navbar-left { gap: 8px; }
   .logo-icons { gap: 15px; }
+  .brand-lockup { gap: 10px; }
+  .brand-word { font-size: 16px; letter-spacing: 3px; }
   .navbar-right { gap: 5px; }
   .search-button { width: 45px; height: 45px; }
   .enquire-button { min-width: 100px; height: 45px; padding: 6px 6px 6px 12px; }

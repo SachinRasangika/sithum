@@ -133,9 +133,9 @@ export default function SafariCelebrate() {
           </div>
 
           <div className="safari-celebrate-enquire">
-            <img 
-              src="https://api.builder.io/api/v1/image/assets/TEMP/db8a5bea3a6be251f60f460ab5cd2a08df15be37?width=400" 
-              alt="Enquire now" 
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/c67b95a33b1daa7196424f8f8c1cd80f8cd138d2?width=400"
+              alt="Enquire now"
               className="safari-enquire-icon"
             />
           </div>

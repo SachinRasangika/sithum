@@ -5,52 +5,84 @@ export default function SafariBeach() {
   return (
     <section className="safari-beach-section" aria-label="Sri Lanka Island & Beach Adventures">
       <div className="safari-beach-container">
-        <div className="safari-beach-background"></div>
-        
-        <div className="safari-beach-content">
-          <div className="safari-beach-images">
-            <img 
-              src="https://api.builder.io/api/v1/image/assets/TEMP/65ff6ed5e6244b2e20c22885f70a35a40ecd5c0a?width=2059" 
-              alt="Safari beach honeymoon" 
-              className="safari-beach-main-image"
-            />
-            <div className="safari-beach-couple-link">
-              <img 
-                src="https://api.builder.io/api/v1/image/assets/TEMP/29cc984c31cf5fc0f154ad45f64e3f45806abe65?width=455" 
-                alt="A man and woman sitting on a boat" 
-                className="safari-beach-couple-image"
-              />
+
+        <div className="safari-beach-layout">
+          <div className="safari-beach-copy">
+            <p className="safari-beach-eyebrow">Island & Beach Journeys</p>
+
+            <h2 className="safari-beach-heading">
+              Award‑winning Sri Lanka & Beach Adventures
+            </h2>
+
+            <p className="safari-beach-subtext">
+              Discover Sri Lanka’s wild parks, tea country, and palm‑fringed beaches in one seamless journey curated for comfort and wonder.
+            </p>
+
+            <ul className="safari-beach-highlights" aria-label="Experience highlights">
+              <li className="highlight-item">
+                <span className="highlight-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6L9 17l-5-5" stroke="#030922" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </span>
+                <span className="highlight-text">Private, flexible itineraries</span>
+              </li>
+              <li className="highlight-item">
+                <span className="highlight-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z" stroke="#030922" strokeWidth="1.5" fill="none"/>
+                  </svg>
+                </span>
+                <span className="highlight-text">Handpicked boutique stays</span>
+              </li>
+              <li className="highlight-item">
+                <span className="highlight-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 10.5c0 6-9 11.5-9 11.5S3 16.5 3 10.5a9 9 0 1118 0z" stroke="#030922" strokeWidth="1.5" fill="none"/>
+                    <circle cx="12" cy="10.5" r="3" stroke="#030922" strokeWidth="1.5" fill="none"/>
+                  </svg>
+                </span>
+                <span className="highlight-text">Local expert guides</span>
+              </li>
+            </ul>
+
+            <div className="safari-beach-actions">
+              <button className="safari-beach-cta-primary">View Sri Lanka Tours</button>
+              <button className="safari-beach-cta-secondary">Talk to a Specialist</button>
             </div>
           </div>
-          
-          <div className="safari-beach-text-content">
-            <div className="safari-beach-header">
-              <div className="decorative-icon decorative-icon-left" aria-hidden="true">
-                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" clipRule="evenodd" d="M2.75 13.7787C3.68862 13.6145 4.63183 13.4871 5.57415 13.3599C6.20758 13.2744 6.8406 13.1888 7.47153 13.0923C8.83558 12.8835 10.2094 12.7654 11.5759 12.648C11.7818 12.6303 11.9875 12.6126 12.193 12.5947C13.7597 12.2837 15.3447 12.1689 16.9274 12.2514C18.5509 12.4333 20.1435 12.9485 21.649 13.7787V14.1734C20.1435 15.0037 18.5509 15.5188 16.9274 15.7007C15.3447 15.7833 13.7597 15.6684 12.193 15.3575C10.6235 15.2202 9.05395 15.0486 7.47153 14.8598C5.88911 14.6711 4.31955 14.448 2.75 14.1734V13.7787ZM18.5361 25.5145C18.7854 24.9327 19.0593 24.3755 19.3323 23.8202C19.4538 23.573 19.5751 23.3262 19.694 23.0778C20.08 22.2713 20.5174 21.4991 20.9805 20.744C21.1491 20.4693 21.2887 20.1672 21.4259 19.8702C21.6659 19.351 21.8988 18.847 22.267 18.5304C22.963 17.9573 23.7649 17.6542 24.5828 17.6552L24.75 17.8955C24.7419 18.9863 24.4911 20.0495 24.0296 20.95C23.769 21.5373 23.3327 21.8734 22.8959 22.2099C22.7074 22.3551 22.5187 22.5004 22.3442 22.666C21.7653 23.2151 21.1735 23.7471 20.5688 24.2619C19.9642 24.7767 19.3466 25.2744 18.6906 25.7376L18.5361 25.5145ZM19.9897 2.89563C19.5993 2.55504 19.2099 2.21529 18.7935 1.9043L18.6134 2.12739C18.9608 2.98539 19.3339 3.80907 19.7198 4.61559C20.1058 5.42212 20.5175 6.21148 20.9292 6.98368C21.0533 7.2165 21.1622 7.46805 21.2711 7.71951C21.5233 8.30203 21.7753 8.88404 22.2157 9.23164C22.8891 9.85209 23.6872 10.187 24.5057 10.1926L24.6858 9.96952C24.6989 8.87639 24.4707 7.80228 24.0297 6.88072C23.7924 6.38953 23.4145 6.07886 23.0252 5.75881C22.8025 5.5757 22.576 5.38952 22.3701 5.16472C21.804 4.54695 21.2508 3.96351 20.6333 3.44871C20.4155 3.26711 20.2024 3.08124 19.9897 2.89563Z" fill="#030922"/>
-                </svg>
-              </div>
-              
-              <h2 className="safari-beach-title">
-                Award-winning
-                Sri Lanka & Beach
-                Adventures
-              </h2>
-              
-              <div className="decorative-icon decorative-icon-right" aria-hidden="true">
-                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" clipRule="evenodd" d="M21.9258 14.282C21.2924 14.3677 20.6594 14.4531 20.0284 14.5497C18.6644 14.7584 17.2907 14.8765 15.9241 14.994L15.9223 14.9941C15.717 15.0118 15.5118 15.0294 15.3069 15.0474C13.7403 15.3582 12.1553 15.4732 10.5725 15.3906C8.94914 15.2087 7.35652 14.6935 5.851 13.8632V13.4686C7.35652 12.6383 8.94914 12.1231 10.5725 11.9412C12.1553 11.8587 13.7403 11.9736 15.3069 12.2844C16.8765 12.4218 18.4461 12.5934 20.0284 12.7821C21.6109 12.9709 23.1805 13.194 24.75 13.4686V13.8632C23.8114 14.0275 22.8682 14.1548 21.9258 14.282ZM8.96387 2.12738C8.71459 2.70925 8.44067 3.26647 8.16768 3.82178C8.0462 4.06891 7.92486 4.31574 7.806 4.56412C7.42005 5.37064 6.98263 6.14284 6.51949 6.89788C6.35094 7.17266 6.21136 7.47471 6.07408 7.77176C5.83413 8.29099 5.60123 8.795 5.23298 9.11154C4.53705 9.68469 3.73513 9.98774 2.91725 9.98673L2.75 9.74647C2.75809 8.6556 3.00884 7.59251 3.47045 6.69196C3.73105 6.10465 4.1674 5.76849 4.60412 5.43204C4.79264 5.28682 4.98123 5.14151 5.15578 4.97596C5.73472 4.42683 6.32651 3.89487 6.93117 3.38007C7.53583 2.86527 8.15336 2.36762 8.80949 1.9043L8.96387 2.12738ZM7.51032 24.7463C7.9007 25.0869 8.29011 25.4266 8.70647 25.7376L8.88659 25.5145C8.53922 24.6565 8.16612 23.8328 7.78017 23.0263C7.39421 22.2198 6.98252 21.4304 6.57083 20.6582C6.44671 20.4254 6.33778 20.1738 6.2289 19.9224C5.97666 19.3398 5.72463 18.7579 5.28431 18.4103C4.61089 17.7898 3.81275 17.4548 2.99429 17.4493L2.81418 17.6724C2.80118 18.7656 3.02934 19.8396 3.4703 20.7612C3.70761 21.2524 4.08548 21.563 4.47475 21.8831C4.69747 22.0662 4.92392 22.2524 5.12992 22.4772C5.69599 23.095 6.2492 23.6784 6.86673 24.1932C7.08456 24.3748 7.29758 24.5606 7.51032 24.7463Z" fill="#030922"/>
-                </svg>
+
+          <div className="safari-beach-gallery" aria-label="Travel inspiration images">
+            <div className="gallery-main">
+              <img
+                src="https://api.builder.io/api/v1/image/assets/TEMP/65ff6ed5e6244b2e20c22885f70a35a40ecd5c0a?width=2059"
+                alt="Golden beach with gentle waves and a couple walking by the shore"
+                className="gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div className="gallery-side">
+              <img
+                src="https://api.builder.io/api/v1/image/assets/TEMP/29cc984c31cf5fc0f154ad45f64e3f45806abe65?width=455"
+                alt="Couple enjoying a serene boat ride"
+                className="gallery-image"
+                loading="lazy"
+              />
+              <img
+                src="https://api.builder.io/api/v1/image/assets/TEMP/65ff6ed5e6244b2e20c22885f70a35a40ecd5c0a?width=1024"
+                alt="Tropical coastline with palm trees"
+                className="gallery-image"
+                loading="lazy"
+              />
+            </div>
+
+            <div className="safari-beach-badge" aria-label="Travel trust indicator">
+              <span className="badge-ring" aria-hidden="true"></span>
+              <div className="badge-content">
+                <strong className="badge-title">Trusted Trips</strong>
+                <span className="badge-sub">Curated for you</span>
               </div>
             </div>
-            
-            <p className="safari-beach-description">
-              Discover Sri Lanka’s wild parks, tea country and palm-fringed beaches in one seamless journey.
-            </p>
-            
-            <button className="safari-beach-cta-button">
-              View Sri Lanka Tours
-            </button>
           </div>
         </div>
       </div>

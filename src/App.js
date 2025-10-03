@@ -11,6 +11,7 @@ import SafariStyle from './components/SafariStyle/SafariStyle';
 import Packages from './components/Packages/Packages';
 import PackagesPage from './components/Packages/PackagesPage';
 import PackageDetail from './components/PackageDetail/PackageDetail';
+import ContactUs from './components/ContactUs/ContactUs';
 import Testimonials from './components/Testimonials/Testimonials';
 import Footer from './components/Footer/Footer';
 
@@ -19,12 +20,12 @@ function HomePage() {
     <>
       <HeroBanner />
       <About />
-      <SafariBeach />
-      <OurWorlds />
       <SafariCelebrate />
+      <SafariBeach />
       <OurService />
       <Packages />
       <SafariStyle />
+      <OurWorlds />
       <Testimonials />
     </>
   );
@@ -42,6 +43,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/packages" element={<PackagesPage />} />
             <Route path="/package/:packageId" element={<PackageDetail />} />
+            <Route path="/contact" element={<ContactUs />} />
           </Routes>
         </main>
         <Footer />

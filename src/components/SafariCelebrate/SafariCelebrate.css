@@ -1,10 +1,9 @@
-/* Safari Celebrate Section - Pixel Perfect Figma Implementation */
+/* Safari Celebrate Section - Pixel Perfect Figma Design */
 .safari-celebrate-section {
-  position: relative;
   width: 100%;
   background: #030922;
   color: #FCF8F7;
-  padding: 110px 183.75px;
+  padding: 110px 184px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -12,58 +11,51 @@
 }
 
 .safari-celebrate-container {
-  width: 1553px;
-  height: 696px;
-  position: relative;
+  width: 100%;
+  max-width: 1553px;
+  min-height: 696px;
   display: flex;
   align-items: flex-start;
+  gap: 85px;
 }
 
 .safari-celebrate-content {
-  position: relative;
-  z-index: 2;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 200px;
 }
 
 .safari-celebrate-header {
   width: 321px;
-  margin-top: 98px;
+  padding-top: 98px;
+  flex-shrink: 0;
 }
 
 .safari-celebrate-title {
   font-family: Georgia, -apple-system, Roboto, Helvetica, sans-serif;
-  font-size: 50.344px;
+  font-size: 50px;
   font-weight: 400;
-  line-height: 64.46px;
+  line-height: 64px;
   letter-spacing: 0.2px;
   color: #FFFFFF;
   margin: 0 0 43px 0;
-  width: 211px;
-  height: 131px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .safari-celebrate-subtitle {
   font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
-  font-size: 17.031px;
+  font-size: 17px;
   font-weight: 300;
   line-height: 29px;
   letter-spacing: 0.66px;
   color: #FFFFFF;
-  margin: 0 0 50px 0;
-  width: 321px;
-  height: 51px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin: 0 0 104px 0;
 }
 
 .safari-celebrate-controls {
   display: flex;
   gap: 10px;
   align-items: center;
-  margin-top: 104px;
 }
 
 .safari-control-button {
@@ -77,15 +69,11 @@
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .safari-control-button:hover:not(:disabled) {
   background: rgba(255, 255, 255, 0.1);
-  transform: scale(1.05);
-}
-
-.safari-control-prev {
-  opacity: 0.35;
 }
 
 .safari-control-button:disabled {
@@ -96,23 +84,23 @@
 .safari-control-button svg {
   width: 16px;
   height: 11px;
+  flex-shrink: 0;
 }
 
 .safari-celebrate-enquire {
-  position: absolute;
-  top: 67px;
-  left: 544px;
   width: 200px;
   height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  flex-shrink: 0;
+  padding-top: 67px;
 }
 
 .safari-enquire-icon {
   width: 200px;
   height: 200px;
+  flex-shrink: 0;
   transform: rotate(-80.28deg);
   transition: transform 0.3s ease;
 }
@@ -122,11 +110,8 @@
 }
 
 .safari-celebrate-slider {
-  position: absolute;
-  top: 0;
-  left: 659px;
-  width: calc(100% - 659px);
-  height: 696px;
+  flex: 1;
+  min-width: 0;
   overflow: hidden;
   user-select: none;
   -webkit-user-select: none;
@@ -137,12 +122,10 @@
   display: flex;
   gap: 30px;
   padding-left: 15px;
-  height: 696px;
   align-items: flex-start;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
   cursor: grab;
-  width: fit-content;
 }
 
 .safari-celebrate-list.is-dragging {
@@ -153,13 +136,10 @@
 .safari-card {
   display: flex;
   width: 496px;
-  height: 696px;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
-  gap: 8.99px;
+  gap: 9px;
   flex-shrink: 0;
-  position: relative;
 }
 
 .safari-card-image-container {
@@ -168,14 +148,13 @@
   background: #FCF8F7;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .safari-card-image {
-  width: 496px;
-  height: 645px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
@@ -187,38 +166,27 @@
 
 .safari-card-title {
   font-family: Georgia, -apple-system, Roboto, Helvetica, sans-serif;
-  font-size: 32.25px;
+  font-size: 32px;
   font-weight: 400;
-  line-height: 41.26px;
+  line-height: 41px;
   color: #FFFFFF;
   margin: 0;
-  width: auto;
-  height: 43px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 /* Responsive Styles */
 
 /* Large Desktop */
-@media (max-width: 1600px) {
+@media (max-width: 1700px) {
   .safari-celebrate-section {
     padding: 110px 120px;
   }
-  
+
   .safari-celebrate-container {
-    width: 100%;
-    max-width: 1400px;
+    gap: 60px;
   }
-  
-  .safari-celebrate-slider {
-    left: 50%;
-    width: 50%;
-  }
-  
-  .safari-celebrate-enquire {
-    left: 45%;
+
+  .safari-celebrate-content {
+    gap: 150px;
   }
 }
 
@@ -227,80 +195,60 @@
   .safari-celebrate-section {
     padding: 100px 80px;
   }
-  
+
   .safari-celebrate-container {
-    width: 100%;
-    max-width: 1200px;
-    height: auto;
     flex-direction: column;
-    gap: 60px;
+    gap: 0;
   }
-  
-  .safari-celebrate-header {
-    margin-top: 0;
+
+  .safari-celebrate-content {
+    flex-direction: row;
+    gap: 80px;
     width: 100%;
-    max-width: 400px;
+    justify-content: space-between;
   }
-  
+
+  .safari-celebrate-header {
+    padding-top: 0;
+  }
+
   .safari-celebrate-title {
     font-size: 45px;
     line-height: 58px;
-    width: auto;
-    height: auto;
   }
-  
+
   .safari-celebrate-subtitle {
     font-size: 16px;
     line-height: 26px;
-    width: auto;
-    max-width: 400px;
-    height: auto;
+    margin-bottom: 40px;
   }
-  
-  .safari-celebrate-controls {
-    margin-top: 40px;
-  }
-  
+
   .safari-celebrate-enquire {
-    position: relative;
-    top: 0;
-    left: 0;
-    margin: 20px auto;
+    padding-top: 0;
   }
-  
+
   .safari-enquire-icon {
     width: 150px;
     height: 150px;
   }
-  
+
   .safari-celebrate-slider {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
+    margin-top: 60px;
   }
-  
+
   .safari-celebrate-list {
     padding-left: 0;
-    height: auto;
   }
-  
+
   .safari-card {
     width: 400px;
-    height: 560px;
   }
-  
+
   .safari-card-image-container {
     width: 400px;
     height: 520px;
   }
-  
-  .safari-card-image {
-    width: 400px;
-    height: 520px;
-  }
-  
+
   .safari-card-title {
     font-size: 28px;
     line-height: 36px;
@@ -312,57 +260,54 @@
   .safari-celebrate-section {
     padding: 80px 60px;
   }
-  
-  .safari-celebrate-header {
-    max-width: 100%;
+
+  .safari-celebrate-content {
+    flex-direction: column;
+    gap: 40px;
   }
-  
+
+  .safari-celebrate-header {
+    width: 100%;
+    max-width: 500px;
+  }
+
   .safari-celebrate-title {
     font-size: 40px;
     line-height: 52px;
     margin-bottom: 30px;
   }
-  
+
   .safari-celebrate-subtitle {
-    max-width: 500px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
-  
-  .safari-celebrate-controls {
-    margin-top: 30px;
+
+  .safari-celebrate-enquire {
+    display: none;
   }
-  
-  .safari-enquire-icon {
-    width: 120px;
-    height: 120px;
+
+  .safari-celebrate-slider {
+    margin-top: 0;
   }
-  
+
   .safari-card {
     width: 350px;
-    height: 480px;
   }
-  
+
   .safari-card-image-container {
     width: 350px;
     height: 440px;
   }
-  
-  .safari-card-image {
-    width: 350px;
-    height: 440px;
-  }
-  
+
   .safari-card-title {
     font-size: 24px;
     line-height: 32px;
-    height: 40px;
   }
-  
+
   .safari-control-button {
     width: 50px;
     height: 50px;
   }
-  
+
   .safari-control-button svg {
     width: 14px;
     height: 9px;
@@ -374,63 +319,50 @@
   .safari-celebrate-section {
     padding: 60px 20px;
   }
-  
-  .safari-celebrate-container {
-    gap: 40px;
+
+  .safari-celebrate-content {
+    gap: 30px;
   }
-  
+
   .safari-celebrate-title {
     font-size: 32px;
     line-height: 42px;
     margin-bottom: 24px;
   }
-  
+
   .safari-celebrate-subtitle {
     font-size: 15px;
     line-height: 24px;
-    max-width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
   }
-  
-  .safari-celebrate-controls {
-    margin-top: 25px;
+
+  .safari-celebrate-slider {
+    margin-top: 30px;
   }
-  
-  .safari-enquire-icon {
-    width: 100px;
-    height: 100px;
-  }
-  
+
   .safari-card {
     width: 280px;
-    height: 380px;
   }
-  
+
   .safari-card-image-container {
     width: 280px;
     height: 340px;
   }
-  
-  .safari-card-image {
-    width: 280px;
-    height: 340px;
-  }
-  
+
   .safari-card-title {
     font-size: 20px;
     line-height: 26px;
-    height: 40px;
   }
-  
+
   .safari-celebrate-list {
     gap: 20px;
   }
-  
+
   .safari-control-button {
     width: 45px;
     height: 45px;
   }
-  
+
   .safari-control-button svg {
     width: 12px;
     height: 8px;
@@ -442,62 +374,54 @@
   .safari-celebrate-section {
     padding: 40px 15px;
   }
-  
-  .safari-celebrate-container {
-    gap: 30px;
+
+  .safari-celebrate-content {
+    gap: 25px;
   }
-  
+
+  .safari-celebrate-header {
+    width: 100%;
+  }
+
   .safari-celebrate-title {
     font-size: 28px;
     line-height: 36px;
     margin-bottom: 20px;
   }
-  
+
   .safari-celebrate-subtitle {
     font-size: 14px;
     line-height: 22px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
-  
-  .safari-celebrate-controls {
-    margin-top: 20px;
+
+  .safari-celebrate-slider {
+    margin-top: 25px;
   }
-  
-  .safari-enquire-icon {
-    width: 80px;
-    height: 80px;
-  }
-  
+
   .safari-card {
     width: 240px;
-    height: 320px;
   }
-  
+
   .safari-card-image-container {
     width: 240px;
     height: 280px;
   }
-  
-  .safari-card-image {
-    width: 240px;
-    height: 280px;
-  }
-  
+
   .safari-card-title {
     font-size: 18px;
     line-height: 24px;
-    height: 40px;
   }
-  
+
   .safari-celebrate-list {
     gap: 15px;
   }
-  
+
   .safari-control-button {
     width: 40px;
     height: 40px;
   }
-  
+
   .safari-control-button svg {
     width: 10px;
     height: 7px;

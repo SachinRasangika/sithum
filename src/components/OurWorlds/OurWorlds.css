@@ -25,6 +25,11 @@
   text-align: center;
 }
 
+/* Ensure this section's title stays white even if other sections use a generic .section-title */
+.our-worlds-header .section-title {
+  color: #FFFFFF;
+}
+
 .section-title-container {
   display: flex;
   justify-content: center;

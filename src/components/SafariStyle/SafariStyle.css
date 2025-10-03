@@ -156,21 +156,22 @@
 /* Review Badge */
 .review-badge {
   position: absolute;
-  top: 552px;
-  right: 36px;
-  width: 93px;
-  height: 37px;
+  bottom: 12px;
+  right: 12px;
+  padding: 6px 12px;
   background: #FAF1EE;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  transform: rotate(90deg);
-  transform-origin: center;
+  border-radius: 6px;
+  z-index: 5;
+  transform: none;
+  box-shadow: 0 6px 18px rgba(3, 9, 34, 0.12);
 }
 
 .featured-lodge .review-badge {
-  top: 286px;
-  right: 60px;
+  bottom: 20px;
+  right: 20px;
 }
 
 .review-badge span {
@@ -197,10 +198,21 @@
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .view-button:hover {
   transform: scale(1.05);
+}
+
+/* Reveal view button only on card hover */
+.safari-lodge-card:hover .view-button,
+.lodge-image-container:hover .view-button {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .view-button span {
@@ -328,7 +340,7 @@
   }
   
   .review-badge {
-    top: 480px;
+    bottom: 20px;
   }
   
   .lodge-name {
@@ -388,8 +400,8 @@
   }
   
   .review-badge {
-    top: 340px;
-    right: 20px;
+    bottom: 12px;
+    right: 12px;
   }
   
   .view-button {
@@ -472,10 +484,11 @@
   }
   
   .review-badge {
-    top: 240px;
-    right: 15px;
-    width: 70px;
-    height: 28px;
+    bottom: 12px;
+    right: 12px;
+    padding: 4px 10px;
+    width: auto;
+    height: auto;
   }
   
   .review-badge span {
