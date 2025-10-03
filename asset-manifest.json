@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/sithum/static/css/main.8b77fedb.css",
-    "main.js": "/sithum/static/js/main.c05b217f.js",
-    "static/js/511.df20e534.chunk.js": "/sithum/static/js/511.df20e534.chunk.js",
-    "static/media/package-placeholder.svg": "/sithum/static/media/package-placeholder.1a221555c922194526bfb1392b9ccf7b.svg",
-    "index.html": "/sithum/index.html",
-    "main.8b77fedb.css.map": "/sithum/static/css/main.8b77fedb.css.map",
-    "main.c05b217f.js.map": "/sithum/static/js/main.c05b217f.js.map",
-    "511.df20e534.chunk.js.map": "/sithum/static/js/511.df20e534.chunk.js.map"
+    "main.css": "./static/css/main.48b48673.css",
+    "main.js": "./static/js/main.b62e761c.js",
+    "static/js/511.bf0cc4bc.chunk.js": "./static/js/511.bf0cc4bc.chunk.js",
+    "static/media/package-placeholder.svg": "./static/media/package-placeholder.1a221555c922194526bfb1392b9ccf7b.svg",
+    "index.html": "./index.html",
+    "static/media/sithuma-wordmark.svg": "./static/media/sithuma-wordmark.3679dc6296414f8365b6897001537cde.svg",
+    "static/media/sithuma-mark.svg": "./static/media/sithuma-mark.b6518dbaa20e135df59163abc71ca124.svg",
+    "main.48b48673.css.map": "./static/css/main.48b48673.css.map",
+    "main.b62e761c.js.map": "./static/js/main.b62e761c.js.map",
+    "511.bf0cc4bc.chunk.js.map": "./static/js/511.bf0cc4bc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b77fedb.css",
-    "static/js/main.c05b217f.js"
+    "static/css/main.48b48673.css",
+    "static/js/main.b62e761c.js"
   ]
 }
