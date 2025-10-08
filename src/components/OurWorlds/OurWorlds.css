@@ -60,7 +60,7 @@
   letter-spacing: 0.2px;
   color: #FCF8F7;
   margin: 0;
-  width: 262px;
+  width: auto;
   text-align: center;
 }
 
@@ -73,8 +73,9 @@
   color: #FCF8F7;
   text-align: center;
   margin: 0 auto;
-  width: 689px;
-  height: 51px;
+  width: 90%;
+  max-width: 689px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,8 +96,9 @@
   top: 403px;
   left: 0;
   width: 100%;
-  height: 799px;
+  height: 860px;
   padding-left: 40px;
+  padding-right: 120px;
   overflow: hidden;
   z-index: 3;
   user-select: none;
@@ -104,33 +106,43 @@
   touch-action: pan-y;
 }
 
+.destinations-viewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.destinations-viewport::-webkit-scrollbar { display: none; }
+.destinations-viewport { scrollbar-width: none; }
+
 .destinations-list {
   display: flex;
   gap: 30px;
-  height: 799px;
-  transition: transform 0.5s ease;
-  width: calc(496px * 6 + 30px * 5);
-  will-change: transform;
-  cursor: grab;
+  height: 860px;
+  width: auto;
 }
-.destinations-list.is-dragging { transition: none; cursor: grabbing; }
 
 .destination-card {
   position: relative;
   width: 496px;
-  height: 799px;
+  height: 860px;
   flex-shrink: 0;
+  scroll-snap-align: start;
 }
 
 .destination-image-container {
   position: relative;
   width: 100%;
-  height: 879px;
+  height: 100%;
 }
 
 .destination-image {
-  width: 496px;
-  height: 879px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
@@ -263,18 +275,18 @@
   
   .destinations-container {
     top: 350px;
-    height: 700px;
+    height: 740px;
     padding-left: 20px;
   }
   
   .destination-card {
     width: 400px;
-    height: 700px;
+    height: 740px;
   }
   
   .destination-image {
     width: 400px;
-    height: 700px;
+    height: 740px;
   }
   
   .destination-circle {
@@ -353,18 +365,18 @@
   
   .destinations-container {
     top: 300px;
-    height: 500px;
+    height: 540px;
     padding-left: 15px;
   }
   
   .destination-card {
     width: 300px;
-    height: 500px;
+    height: 540px;
   }
   
   .destination-image {
     width: 300px;
-    height: 500px;
+    height: 540px;
   }
   
   .destination-circle {
@@ -468,18 +480,18 @@
   
   .destinations-container {
     top: 240px;
-    height: 400px;
+    height: 420px;
     padding-left: 10px;
   }
   
   .destination-card {
     width: 250px;
-    height: 400px;
+    height: 420px;
   }
   
   .destination-image {
     width: 250px;
-    height: 400px;
+    height: 420px;
   }
   
   .destination-circle {
@@ -532,7 +544,7 @@
 /* Extra small mobile */
 @media (max-width: 480px) {
   .our-worlds-section {
-    min-height: 700px;
+    min-height: 740px;
   }
   
   .our-worlds-header {
@@ -561,18 +573,18 @@
   
   .destinations-container {
     top: 200px;
-    height: 350px;
+    height: 360px;
     padding-left: 5px;
   }
   
   .destination-card {
     width: 200px;
-    height: 350px;
+    height: 360px;
   }
   
   .destination-image {
     width: 200px;
-    height: 350px;
+    height: 360px;
   }
   
   .destination-circle {

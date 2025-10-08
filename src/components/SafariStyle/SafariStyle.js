@@ -1,43 +1,18 @@
 import React from 'react';
 import './SafariStyle.css';
+import { useNavigate } from 'react-router-dom';
+import { hotels } from '../../data/hotels';
 
 const SafariStyle = () => {
-  const safariLodges = [
-    {
-      id: 1,
-      name: "Ceylon Tea Trails",
-      location: "Hatton, Sri Lanka",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/166cc298ca17a9952a4537336b3859e9b6b45870?width=982",
-      alt: "Ceylon Tea Trails bungalows"
-    },
-    {
-      id: 2,
-      name: "Chena Huts", 
-      location: "Yala, Sri Lanka",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/e020b772f5cd413a57d00578a44a52c9e7de5990?width=982",
-      alt: "Chena Huts by Uga in Yala"
-    },
-    {
-      id: 3,
-      name: "Cape Weligama",
-      location: "Weligama, Sri Lanka", 
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/b268a185c0ec777789c566afbaf9ef0d849a6cbe?width=982",
-      alt: "Cape Weligama luxury resort"
-    }
-  ];
+  const navigate = useNavigate();
 
-  const featuredLodge = {
-    name: "Wild Coast Tented Lodge",
-    location: "Yala National Park, Sri Lanka",
-    image: "https://api.builder.io/api/v1/image/assets/TEMP/81cebc6e2622df4176e4add2fc10f17ec51c30c8?width=3355",
-    alt: "Wild Coast Tented Lodge in Yala",
-    description: "A design-led lodge cocooned between jungle and the Indian Ocean, offering unforgettable game drives in Yala alongside beachfront relaxation and exceptional cuisine.",
-  };
+  const featuredLodge = hotels.find((h) => h.slug === 'wild-coast-tented-lodge') || hotels[0];
+
+  const goToDetails = (slug) => navigate(`/hotel/${slug}`);
 
   return (
-    <section className="safari-style-section">
+    <section id="stays" className="safari-style-section">
       <div className="safari-style-container">
-        {/* Header */}
         <div className="safari-style-header">
           <h2 className="safari-style-title">Sri Lanka Stays</h2>
           <div className="safari-style-icon">
@@ -56,12 +31,10 @@ const SafariStyle = () => {
           </div>
         </div>
 
-        {/* Description */}
         <p className="safari-style-description">
           Whether a family holiday, a honeymoon or an adventure, we will craft the perfect Sri Lanka trip for you.
         </p>
 
-        {/* Featured Lodge */}
         <div className="featured-lodge">
           <div className="featured-lodge-image">
             <img src={featuredLodge.image} alt={featuredLodge.alt} />
@@ -76,18 +49,26 @@ const SafariStyle = () => {
           </div>
         </div>
 
-        {/* Safari Lodges Grid */}
         <div className="safari-lodges-grid">
-          {safariLodges.map((lodge) => (
+          {hotels.map((lodge) => (
             <div key={lodge.id} className="safari-lodge-card">
-              <div className="lodge-image-container">
+              <div
+                className="lodge-image-container"
+                onClick={() => goToDetails(lodge.slug)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e)=>{ if(e.key==='Enter'){ goToDetails(lodge.slug);} }}
+              >
                 <img src={lodge.image} alt={lodge.alt} />
                 <div className="review-badge">
                   <span>Review</span>
                 </div>
-                <div className="view-button">
+                <button
+                  className="view-button"
+                  onClick={(e)=>{ e.stopPropagation(); goToDetails(lodge.slug); }}
+                >
                   <span>View</span>
-                </div>
+                </button>
               </div>
               <div className="lodge-info">
                 <h3 className="lodge-name">{lodge.name}</h3>
@@ -97,12 +78,9 @@ const SafariStyle = () => {
           ))}
         </div>
 
-        {/* View More Section */}
         <div className="view-more-section">
           <div className="view-more-divider view-more-divider-left"></div>
-          <button className="view-more-button">
-            View more
-          </button>
+          <button className="view-more-button">View more</button>
           <div className="view-more-divider view-more-divider-right"></div>
         </div>
       </div>

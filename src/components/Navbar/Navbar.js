@@ -5,8 +5,6 @@ import sithumaMark from '../../assets/sithuma-mark.svg';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [destOpen, setDestOpen] = useState(false);
-  const [pkgOpen, setPkgOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
   const [currencyOpen, setCurrencyOpen] = useState(false);
@@ -27,8 +25,6 @@ export default function Navbar() {
     const onKey = (e) => {
       if (e.key === 'Escape') {
         setMenuOpen(false);
-        setDestOpen(false);
-        setPkgOpen(false);
         setLanguageOpen(false);
         setCurrencyOpen(false);
       }
@@ -88,13 +84,6 @@ export default function Navbar() {
           </div>
 
           <div className="navbar-right">
-            <a className="search-button" href="#hero" aria-label="Search">
-              <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M1.01367 7.83985C1.01367 9.50781 1.67626 11.1075 2.8557 12.2869C4.03512 13.4663 5.63477 14.1289 7.30274 14.1289C8.9707 14.1289 10.5703 13.4663 11.7498 12.2869C12.9292 11.1075 13.5918 9.50781 13.5918 7.83985C13.5918 6.17188 12.9292 4.57223 11.7498 3.39281C10.5703 2.21337 8.9707 1.55078 7.30274 1.55078C5.63477 1.55078 4.03512 2.21337 2.8557 3.39281C1.67626 4.57223 1.01367 6.17188 1.01367 7.83985Z" stroke="#030922" strokeWidth="1.57226" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M11.749 12.2871L19.0947 19.6327" stroke="#030922" strokeWidth="1.57226" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </a>
-
             <div className="pill-select-group">
               <div className={`pill-select${languageOpen ? ' is-open' : ''}`} ref={langRef}>
                 <button
@@ -165,35 +154,11 @@ export default function Navbar() {
       <div className="navbar-bottom">
         <div className="navbar-bottom-content">
           <div className="nav-links" role="menubar">
-            <div className={`nav-item dropdown${destOpen ? ' is-open' : ''}`} onMouseEnter={() => setDestOpen(true)} onMouseLeave={() => setDestOpen(false)}>
-              <button className="nav-trigger" role="menuitem" aria-haspopup="true" aria-expanded={destOpen} onClick={() => setDestOpen((v)=>!v)}>
-                <span>Destinations</span>
-                <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g clipPath="url(#clip0_103_894)"><path d="M1.05469 3.0918L5.05469 7.0918L9.05469 3.0918" stroke="white" strokeWidth="0.75" strokeLinecap="square"/></g><defs><clipPath id="clip0_103_894"><rect width="10" height="8" fill="white" transform="translate(0.0546875 0.591797)"/></clipPath></defs></svg>
-              </button>
-              <div className="dropdown-panel" role="menu">
-                <a href="#packages" className="drop-link">South Coast</a>
-                <a href="#packages" className="drop-link">Galle Fort</a>
-                <a href="#packages" className="drop-link">Tea Country</a>
-                <a href="#packages" className="drop-link">Cultural Triangle</a>
-              </div>
-            </div>
-
-            <div className={`nav-item dropdown${pkgOpen ? ' is-open' : ''}`} onMouseEnter={() => setPkgOpen(true)} onMouseLeave={() => setPkgOpen(false)}>
-              <button className="nav-trigger" role="menuitem" aria-haspopup="true" aria-expanded={pkgOpen} onClick={() => setPkgOpen((v)=>!v)}>
-                <span>Tour Packages</span>
-                <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g clipPath="url(#clip0_103_901)"><path d="M1.05469 3.0918L5.05469 7.0918L9.05469 3.0918" stroke="white" strokeWidth="0.75" strokeLinecap="square"/></g><defs><clipPath id="clip0_103_901"><rect width="10" height="8" fill="white" transform="translate(0.0546875 0.591797)"/></clipPath></defs></svg>
-              </button>
-              <div className="dropdown-panel" role="menu">
-                <a href="#packages" className="drop-link">Family Adventure</a>
-                <a href="#packages" className="drop-link">Wildlife & Beach</a>
-                <a href="#packages" className="drop-link">Tea Trails Escape</a>
-              </div>
-            </div>
-
-            <a className="nav-item" href="#hero" role="menuitem"><span>Itineraries</span></a>
-            <a className="nav-item" href="#about" role="menuitem"><span>Experiences</span></a>
-            <a className="nav-item" href="#footer" role="menuitem"><span>About Us</span></a>
-            <Link className="nav-item" to="/contact" role="menuitem"><span>Contact Us</span></Link>
+            <Link className="nav-item" to="/" role="menuitem"><span>Home</span></Link>
+            <Link className="nav-item" to="/about" role="menuitem"><span>About</span></Link>
+            <Link className="nav-item" to="/packages" role="menuitem"><span>Tour Packages</span></Link>
+            <Link className="nav-item" to="/sri-lanka-stay" role="menuitem"><span>Sri Lanka Stays</span></Link>
+            <Link className="nav-item" to="/contact" role="menuitem"><span>Contact</span></Link>
           </div>
         </div>
       </div>
@@ -206,12 +171,11 @@ export default function Navbar() {
           <button className="drawer-close" aria-label="Close menu" onClick={() => setMenuOpen(false)}>✕</button>
         </div>
         <nav className="drawer-links">
-          <a href="#packages" onClick={() => setMenuOpen(false)}>Destinations</a>
-          <a href="#packages" onClick={() => setMenuOpen(false)}>Tour Packages</a>
-          <a href="#hero" onClick={() => setMenuOpen(false)}>Itineraries</a>
-          <a href="#about" onClick={() => setMenuOpen(false)}>Experiences</a>
-          <a href="#footer" onClick={() => setMenuOpen(false)}>About Us</a>
-          <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
+          <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+          <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
+          <Link to="/packages" onClick={() => setMenuOpen(false)}>Tour Packages</Link>
+          <Link to="/sri-lanka-stay" onClick={() => setMenuOpen(false)}>Sri Lanka Stays</Link>
+          <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
         </nav>
         <div className="drawer-controls">
           <div className="drawer-select-group">

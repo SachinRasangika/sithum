@@ -2,7 +2,7 @@ export const packagesData = [
   {
     id: 'ct-wildlife-beach',
     title: 'Cultural Triangle, Wildlife & Beach',
-    image: 'https://api.builder.io/api/v1/image/assets/TEMP/0f5f7f9f2d4f4a67b5b8a98d4cf33f6d2c5ef1a9?width=1600',
+    image: 'https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1600&auto=format&fit=crop',
     days: 12,
     priceFrom: 'From $2,450 pp',
     highlights: ['Sigiriya & Ancient Cities', 'Yala Safari', 'South Coast Beaches'],
@@ -14,7 +14,7 @@ export const packagesData = [
   {
     id: 'tea-trails-coast',
     title: 'Tea Trails & South Coast Bliss',
-    image: 'https://api.builder.io/api/v1/image/assets/TEMP/b2b1a5b49b0e4f0ebc2c8f1a7e9cf4a1a84a0b11?width=1600',
+    image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop',
     days: 8,
     priceFrom: 'From $1,650 pp',
     highlights: ['Hatton Tea Country', 'Scenic Train', 'Weligama Coast'],
@@ -26,7 +26,7 @@ export const packagesData = [
   {
     id: 'family-adventure',
     title: 'Family Adventure Sri Lanka',
-    image: 'https://api.builder.io/api/v1/image/assets/TEMP/7a7f8d4df4b247a6a0e8a07bc3f2cd7a131c1b50?width=1600',
+    image: 'https://images.unsplash.com/photo-1499696010180-025ef9a25c80?q=80&w=1600&auto=format&fit=crop',
     days: 10,
     priceFrom: 'From $2,150 pp',
     highlights: ['Udawalawe Elephants', 'Galle Fort', 'Whale Watching'],

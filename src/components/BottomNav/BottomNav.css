@@ -1,0 +1,12 @@
+/* Fixed bottom nav for mobile */
+.bottom-nav { position: fixed; left: 0; right: 0; bottom: 0; background: #030922; border-top: 1px solid #ffffff; z-index: 1100; display: none; }
+.bottom-nav-inner { max-width: 1920px; margin: 0 auto; padding: 8px 10px calc(env(safe-area-inset-bottom) + 8px); display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.bottom-nav-item { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-decoration: none; padding: 8px 6px; border-radius: 12px; }
+.bottom-nav-item:active, .bottom-nav-item:focus-visible { outline: 2px solid #ffffff; outline-offset: 2px; }
+.bottom-nav-label { color: #ffffff; font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.6px; text-transform: uppercase; display: block; text-align: center; }
+
+/* spacer to prevent content being hidden under fixed nav */
+.bottom-nav-spacer { display: none; height: calc(56px + env(safe-area-inset-bottom)); }
+
+/* Show only on small screens */
+@media (max-width: 768px) { .bottom-nav { display: block; } .bottom-nav-spacer { display: block; } }

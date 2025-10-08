@@ -1,0 +1,35 @@
+/* Sri Lanka Stays listing - follows existing round + blue style */
+.stays-section { position: relative; width: 100%; background: #ffffff; padding: 100px 0; color: #030922; }
+.stays-container { max-width: 1920px; width: 100%; margin: 0 auto; padding: 0 184px; }
+
+.stays-header { text-align: center; margin-bottom: 40px; }
+.stays-title-wrap { display: flex; justify-content: center; align-items: center; gap: 36px; margin-bottom: 18px; }
+.stays-decorative { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; }
+.stays-title { font-family: 'Georgia', serif; font-size: 46px; font-weight: 400; line-height: 58px; letter-spacing: .2px; color: #030922; margin: 0; }
+.stays-subtitle { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 300; line-height: 28px; letter-spacing: .5px; color: #1b2548; margin: 0 auto; max-width: 720px; }
+
+.stays-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+
+.stay-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 0 rgba(2,12,60,.02); display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s; }
+.stay-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(2,12,60,.08); }
+.stay-media { position: relative; display: block; width: 100%; height: 260px; background: #f6f8fc; overflow: hidden; }
+.stay-media img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.stay-chip { position: absolute; left: 14px; bottom: 14px; background: rgba(252, 248, 247, 0.9); color: #030922; font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; padding: 8px 12px; border-radius: 100px; }
+
+.stay-body { padding: 20px; display: flex; flex-direction: column; gap: 10px; }
+.stay-name { margin: 0; font-family: 'Georgia', serif; font-size: 22px; font-weight: 400; line-height: 30px; color: #030922; }
+.stay-name a { color: inherit; text-decoration: none; }
+.stay-name a:hover { text-decoration: underline; }
+.stay-desc { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 300; line-height: 22px; color: #1b2548; margin: 0; }
+.stay-tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.stay-tag { display: inline-flex; align-items: center; justify-content: center; height: 30px; padding: 0 10px; border: 1px solid #e5e7eb; background: #fff; color: #030922; font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: .4px; border-radius: 999px; }
+
+.stay-actions { display: flex; gap: 10px; margin-top: 6px; }
+.stay-view { display: inline-flex; align-items: center; justify-content: center; height: 44px; padding: 0 18px; background: #030922; color: #FFFFFF; border: 1px solid #030922; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; border-radius: 12px; }
+.stay-view:hover { background: transparent; color: #030922; }
+
+/* Responsive */
+@media (max-width: 1440px) { .stays-container { padding: 0 120px; } .stays-grid { gap: 24px; } }
+@media (max-width: 1024px) { .stays-container { padding: 0 60px; } .stays-grid { grid-template-columns: repeat(2, 1fr); } .stay-media{ height: 240px; } }
+@media (max-width: 768px) { .stays-container { padding: 0 20px; } .stays-title-wrap { flex-direction: column; gap: 15px; } .stays-grid { grid-template-columns: 1fr; gap: 18px; } .stays-title { font-size: 32px; line-height: 42px; } .stays-subtitle { font-size: 14px; line-height: 22px; } .stay-media{ height: 220px; } }
+@media (max-width: 480px) { .stays-title { font-size: 28px; line-height: 36px; } .stays-subtitle { font-size: 13px; line-height: 20px; } .stay-view { width: 100%; height: 45px; } }

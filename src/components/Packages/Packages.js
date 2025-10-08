@@ -6,20 +6,20 @@ import placeholderImg from '../../assets/package-placeholder.svg';
 
 const IconCalendar = () => (
   <svg className="meta-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M11.333 1.333V3.333M4.667 1.333V3.333M2 6H14M3.333 2.667H12.667C13.403 2.667 14 3.264 14 4V12.667C14 13.403 13.403 14 12.667 14H3.333C2.597 14 2 13.403 2 12.667V4C2 3.264 2.597 2.667 3.333 2.667Z" stroke="#FCF8F7" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M11.333 1.333V3.333M4.667 1.333V3.333M2 6H14M3.333 2.667H12.667C13.403 2.667 14 3.264 14 4V12.667C14 13.403 13.403 14 12.667 14H3.333C2.597 14 2 13.403 2 12.667V4C2 3.264 2.597 2.667 3.333 2.667Z" stroke="#030922" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
 const IconTag = () => (
   <svg className="meta-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M8.667 2H12a1.333 1.333 0 0 1 1.333 1.333v3.333a1.333 1.333 0 0 1-.39.943l-5.657 5.657a1.333 1.333 0 0 1-1.885 0L2.734 11.24a1.333 1.333 0 0 1 0-1.885L8.39 3.057A1.333 1.333 0 0 1 9.333 2.667V2Z" stroke="#FCF8F7" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
-    <circle cx="10.333" cy="5" r="1" fill="#FCF8F7"/>
+    <path d="M8.667 2H12a1.333 1.333 0 0 1 1.333 1.333v3.333a1.333 1.333 0 0 1-.39.943l-5.657 5.657a1.333 1.333 0 0 1-1.885 0L2.734 11.24a1.333 1.333 0 0 1 0-1.885L8.39 3.057A1.333 1.333 0 0 1 9.333 2.667V2Z" stroke="#030922" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+    <circle cx="10.333" cy="5" r="1" fill="#030922"/>
   </svg>
 );
 
 const IconCheck = () => (
   <svg className="highlight-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M5.167 9.333L2.667 6.833 1.5 8l3.667 3.667L12.5 4.333 11.333 3.167 5.167 9.333Z" fill="#FCF8F7"/>
+    <path d="M5.167 9.333L2.667 6.833 1.5 8l3.667 3.667L12.5 4.333 11.333 3.167 5.167 9.333Z" fill="#030922"/>
   </svg>
 );
 
@@ -34,6 +34,7 @@ export default function Packages() {
   const viewPackage = (packageId) => {
     navigate(`/package/${packageId}`);
   };
+
 
   return (
     <section id="packages" className="packages-section" aria-label="Tour Packages">

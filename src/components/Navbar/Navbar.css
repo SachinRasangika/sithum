@@ -117,7 +117,7 @@
 
 @media (max-width: 768px) {
   .navbar-top-content { padding: 0 15px; }
-  .navbar-bottom { overflow-x: auto; }
+  .navbar-bottom { display: none; }
   .navbar-bottom-content { padding: 0 15px; justify-content: flex-start; min-width: max-content; }
   .nav-links { gap: 30px; }
   .navbar-left { gap: 12px; }

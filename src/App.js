@@ -14,6 +14,10 @@ import PackageDetail from './components/PackageDetail/PackageDetail';
 import ContactUs from './components/ContactUs/ContactUs';
 import Testimonials from './components/Testimonials/Testimonials';
 import Footer from './components/Footer/Footer';
+import BottomNav from './components/BottomNav/BottomNav';
+import HotelDetail from './components/HotelDetail/HotelDetail';
+import SriLankaStay from './components/SriLankaStay/SriLankaStay';
+import AboutPage from './components/AboutPage/AboutPage';
 
 function HomePage() {
   return (
@@ -43,10 +47,15 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/packages" element={<PackagesPage />} />
             <Route path="/package/:packageId" element={<PackageDetail />} />
+            <Route path="/hotel/:slug" element={<HotelDetail />} />
+            <Route path="/sri-lanka-stay" element={<SriLankaStay />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactUs />} />
           </Routes>
         </main>
+        <div className="bottom-nav-spacer" />
         <Footer />
+        <BottomNav />
       </div>
     </Router>
   );

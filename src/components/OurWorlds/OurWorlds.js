@@ -2,14 +2,9 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import './OurWorlds.css';
 
 export default function OurWorlds() {
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [step, setStep] = useState(0);
-  const [maxSlide, setMaxSlide] = useState(0);
+  const viewportRef = useRef(null);
   const listRef = useRef(null);
-  const containerRef = useRef(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [dragDelta, setDragDelta] = useState(0);
-  const dragStartX = useRef(0);
 
   const destinations = useMemo(() => [
     {
@@ -53,24 +48,17 @@ export default function OurWorlds() {
   useEffect(() => {
     const measure = () => {
       const listEl = listRef.current;
-      const containerEl = containerRef.current;
-      if (!listEl || !containerEl) return;
+      if (!listEl) return;
       const firstCard = listEl.querySelector('.destination-card');
       if (!firstCard) return;
       const cardRect = firstCard.getBoundingClientRect();
       const styles = window.getComputedStyle(listEl);
       const gapX = parseFloat(styles.columnGap || styles.gap || '0') || 0;
       const stepPx = cardRect.width + gapX;
-      const containerWidth = containerEl.getBoundingClientRect().width;
-      const visible = Math.max(1, Math.floor(containerWidth / stepPx));
-      const max = Math.max(0, destinations.length - visible);
       setStep(stepPx);
-      setMaxSlide(max);
-      setCurrentSlide((prev) => Math.min(prev, max));
     };
     measure();
     const ro = new ResizeObserver(measure);
-    if (containerRef.current) ro.observe(containerRef.current);
     if (listRef.current) ro.observe(listRef.current);
     window.addEventListener('orientationchange', measure);
     window.addEventListener('resize', measure);
@@ -79,88 +67,62 @@ export default function OurWorlds() {
       window.removeEventListener('orientationchange', measure);
       window.removeEventListener('resize', measure);
     };
-  }, [destinations.length]);
+  }, []);
 
-  const nextSlide = () => setCurrentSlide((prev) => (prev >= maxSlide ? 0 : prev + 1));
-  const prevSlide = () => setCurrentSlide((prev) => (prev <= 0 ? maxSlide : prev - 1));
+  const scrollNext = () => {
+    const viewport = viewportRef.current;
+    if (!viewport || !step) return;
+    const atEnd = Math.ceil(viewport.scrollLeft + viewport.clientWidth + 1) >= viewport.scrollWidth;
+    if (atEnd) {
+      viewport.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      viewport.scrollBy({ left: step, behavior: 'smooth' });
+    }
+  };
+
+  const scrollPrev = () => {
+    const viewport = viewportRef.current;
+    if (!viewport || !step) return;
+    const atStart = viewport.scrollLeft <= 0;
+    if (atStart) {
+      const maxLeft = viewport.scrollWidth - viewport.clientWidth;
+      viewport.scrollTo({ left: Math.max(0, maxLeft), behavior: 'smooth' });
+    } else {
+      viewport.scrollBy({ left: -step, behavior: 'smooth' });
+    }
+  };
 
   return (
     <section className="our-worlds-section" aria-label="Our Travel Destinations">
-      <div className="our-worlds-background"></div>
-      
-      <div className="our-worlds-header">
-        <div className="section-title-container">
-          <div className="decorative-icon decorative-icon-left" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fillRule="evenodd" clipRule="evenodd" d="M3.13477 14.0199C4.07339 13.8558 5.0166 13.7283 5.95891 13.6011C6.59234 13.5156 7.22536 13.4301 7.8563 13.3335C9.22034 13.1247 10.5941 13.0067 11.9607 12.8892C12.1666 12.8715 12.3723 12.8538 12.5778 12.8359C14.1445 12.5249 15.7295 12.4101 17.3122 12.4926C18.9356 12.6745 20.5282 13.1897 22.0338 14.0199V14.4147C20.5282 15.2449 18.9356 15.76 17.3122 15.9419C15.7295 16.0245 14.1445 15.9096 12.5778 15.5987C11.0083 15.4614 9.43872 15.2898 7.8563 15.1011C6.27387 14.9123 4.70432 14.6892 3.13477 14.4147V14.0199Z" fill="#030D34"/>
-            </svg>
-          </div>
-          
-          <h2 className="section-title">Sri Lanka Regions</h2>
-          
-          <div className="decorative-icon decorative-icon-right" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fillRule="evenodd" clipRule="evenodd" d="M22.1504 14.5233C21.517 14.6089 20.884 14.6943 20.253 14.7909C18.889 14.9997 17.5152 15.1177 16.1487 15.2352C15.9428 15.2529 15.7371 15.2706 15.5316 15.2886C13.9649 15.5994 12.3799 15.7144 10.7972 15.6318C9.17375 15.4499 7.58113 14.9347 6.07561 14.1044V13.7098C7.58113 12.8795 9.17375 12.3643 10.7972 12.1825C12.3799 12.0999 13.9649 12.2148 15.5316 12.5257C17.1011 12.663 18.6707 12.8346 20.253 13.0233C21.8355 13.2121 23.4051 13.4352 24.9746 13.7098V14.1044C24.036 14.2687 23.0928 14.396 22.1504 14.5233Z" fill="#030D34"/>
-            </svg>
-          </div>
-        </div>
-        
-        <p className="section-description">
-          From the Cultural Triangle to the golden south coast, explore Sri Lanka’s most inspiring regions.
-        </p>
-      </div>
-      
+
+
       <div className="section-divider"></div>
 
-      <div ref={containerRef} className="destinations-container">
-        <div
-          ref={listRef}
-          className={`destinations-list ${isDragging ? 'is-dragging' : ''}`}
-          style={{ transform: `translateX(calc(-${currentSlide * step}px + ${dragDelta}px))` }}
-          onPointerDown={(e) => {
-            dragStartX.current = e.clientX;
-            setIsDragging(true);
-            setDragDelta(0);
-            try { e.currentTarget.setPointerCapture(e.pointerId); } catch {}
-          }}
-          onPointerMove={(e) => {
-            if (!isDragging) return;
-            const delta = e.clientX - dragStartX.current;
-            setDragDelta(delta);
-          }}
-          onPointerUp={(e) => {
-            if (!isDragging) return;
-            const threshold = Math.max(40, step * 0.25);
-            if (dragDelta < -threshold) { setCurrentSlide(prev => (prev >= maxSlide ? 0 : prev + 1)); }
-            else if (dragDelta > threshold) { setCurrentSlide(prev => (prev <= 0 ? maxSlide : prev - 1)); }
-            setIsDragging(false);
-            setDragDelta(0);
-            try { e.currentTarget.releasePointerCapture(e.pointerId); } catch {}
-          }}
-          onPointerCancel={() => { setIsDragging(false); setDragDelta(0); }}
-          onPointerLeave={() => { if (isDragging) { setIsDragging(false); setDragDelta(0); } }}
-        >
-          {destinations.map((destination, index) => (
-            <div key={destination.id} className="destination-card">
-              <div className="destination-image-container">
-                <img
-                  src={destination.image}
-                  alt={destination.alt}
-                  className="destination-image"
-                />
-                <div className="destination-hover-cta">
-                  <button type="button" className="destination-circle-button" aria-label={`View ${destination.title}`}>
-                    <span className="destination-circle-text">{destination.title}</span>
-                  </button>
+      <div className="destinations-container">
+        <div ref={viewportRef} className="destinations-viewport" aria-label="Destinations carousel" role="region">
+          <div ref={listRef} className="destinations-list">
+            {destinations.map((destination) => (
+              <div key={destination.id} className="destination-card">
+                <div className="destination-image-container">
+                  <img
+                    src={destination.image}
+                    alt={destination.alt}
+                    className="destination-image"
+                  />
+                  <div className="destination-hover-cta">
+                    <button type="button" className="destination-circle-button" aria-label={`View ${destination.title}`}>
+                      <span className="destination-circle-text">{destination.title}</span>
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        <button 
+        <button
           className="carousel-button carousel-button-prev"
-          onClick={prevSlide}
+          onClick={scrollPrev}
           aria-label="Previous destinations"
         >
           <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -175,9 +137,9 @@ export default function OurWorlds() {
           </svg>
         </button>
 
-        <button 
+        <button
           className="carousel-button carousel-button-next"
-          onClick={nextSlide}
+          onClick={scrollNext}
           aria-label="Next destinations"
         >
           <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -192,7 +154,6 @@ export default function OurWorlds() {
           </svg>
         </button>
       </div>
-
     </section>
   );
 }

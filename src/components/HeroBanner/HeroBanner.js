@@ -2,13 +2,6 @@ import React from 'react';
 import './HeroBanner.css';
 
 export default function HeroBanner() {
-  const onSubmitBooking = (e) => {
-    e.preventDefault();
-    const anchor = document.getElementById('packages');
-    if (anchor) anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    else window.location.hash = '#packages';
-  };
-
   return (
     <section id="hero" className="hero-section" aria-label="Hero">
       <div className="hero-background" aria-hidden="true">
@@ -51,33 +44,6 @@ export default function HeroBanner() {
             <span className="trust-item">Local expert support</span>
           </div>
 
-          <form className="booking-bar" onSubmit={onSubmitBooking} aria-label="Quick trip planner">
-            <div className="booking-field">
-              <label htmlFor="dest" className="visually-hidden">Destination</label>
-              <select id="dest" className="booking-input" defaultValue="Sri Lanka" aria-label="Destination">
-                <option value="Sri Lanka">Sri Lanka</option>
-                <option value="South Coast">South Coast</option>
-                <option value="Tea Country">Tea Country</option>
-                <option value="Cultural Triangle">Cultural Triangle</option>
-                <option value="Wildlife">Wildlife</option>
-              </select>
-            </div>
-            <div className="booking-sep" aria-hidden="true"></div>
-            <div className="booking-field">
-              <label htmlFor="start" className="visually-hidden">Start date</label>
-              <input id="start" className="booking-input" type="date" aria-label="Start date" />
-            </div>
-            <div className="booking-sep" aria-hidden="true"></div>
-            <div className="booking-field">
-              <label htmlFor="guests" className="visually-hidden">Guests</label>
-              <select id="guests" className="booking-input" defaultValue="2" aria-label="Guests">
-                {Array.from({ length: 6 }, (_, i) => i + 1).map((g) => (
-                  <option key={g} value={g}>{g} {g === 1 ? 'Guest' : 'Guests'}</option>
-                ))}
-              </select>
-            </div>
-            <button type="submit" className="booking-submit">Search</button>
-          </form>
         </div>
       </div>
 
