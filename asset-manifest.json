@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "./static/css/main.48b48673.css",
-    "main.js": "./static/js/main.b62e761c.js",
+    "main.css": "./static/css/main.c8b92d0f.css",
+    "main.js": "./static/js/main.caa1e330.js",
     "static/js/511.bf0cc4bc.chunk.js": "./static/js/511.bf0cc4bc.chunk.js",
     "static/media/package-placeholder.svg": "./static/media/package-placeholder.1a221555c922194526bfb1392b9ccf7b.svg",
     "index.html": "./index.html",
     "static/media/sithuma-wordmark.svg": "./static/media/sithuma-wordmark.3679dc6296414f8365b6897001537cde.svg",
     "static/media/sithuma-mark.svg": "./static/media/sithuma-mark.b6518dbaa20e135df59163abc71ca124.svg",
-    "main.48b48673.css.map": "./static/css/main.48b48673.css.map",
-    "main.b62e761c.js.map": "./static/js/main.b62e761c.js.map",
+    "main.c8b92d0f.css.map": "./static/css/main.c8b92d0f.css.map",
+    "main.caa1e330.js.map": "./static/js/main.caa1e330.js.map",
     "511.bf0cc4bc.chunk.js.map": "./static/js/511.bf0cc4bc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.48b48673.css",
-    "static/js/main.b62e761c.js"
+    "static/css/main.c8b92d0f.css",
+    "static/js/main.caa1e330.js"
   ]
 }
