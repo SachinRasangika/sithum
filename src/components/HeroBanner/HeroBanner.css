@@ -15,6 +15,9 @@
 /* Content */
 .hero-content-grid { position: relative; z-index: 4; height: 100%; max-width: 1180px; margin: 0 auto; padding: 0 24px 140px; display: grid; grid-template-rows: 1fr auto; align-items: center; justify-items: center; text-align: center; gap: 18px; color: #FCF8F7; }
 .hero-heading-group { max-width: 900px; }
+.hero-title-wrap { display: flex; align-items: center; justify-content: center; gap: 18px; margin-bottom: 12px; }
+.hero-decorative { width: 28px; height: 26px; display: flex; align-items: center; justify-content: center; }
+@media (max-width: 768px){ .hero-title-wrap{ gap: 12px; } }
 .hero-content-card { max-width: 900px; margin: 0 auto; padding: 28px 22px; border-radius: 16px; background: transparent; border: 0; backdrop-filter: none; color: #FCF8F7; }
 .hero-subcaption { font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 2.4px; color: #fff; opacity: .9; text-transform: uppercase; margin: 0 0 18px; }
 .hero-title { font-family: 'Georgia', serif; font-size: 64px; font-weight: 400; line-height: 72px; color: #fff; margin: 0 0 16px; text-shadow: 0 10px 40px rgba(0,0,0,.45); }

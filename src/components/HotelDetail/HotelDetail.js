@@ -44,17 +44,108 @@ const HotelDetail = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const checkInPolicy = hotel.policies?.find((p) => p.title.toLowerCase().includes('check-in'));
+  const checkOutPolicy = hotel.policies?.find((p) => p.title.toLowerCase().includes('check-out'));
+  const scheduleText = [checkInPolicy?.text, checkOutPolicy?.text].filter(Boolean).join(' · ');
+  const primaryInclusion = hotel.inclusions?.[0];
+
+  const keyDetails = [
+    hotel.location
+      ? {
+          id: 'location',
+          label: 'Location',
+          value: hotel.location,
+          icon: (
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 4.55 7 13 7 13s7-8.45 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
+            </svg>
+          )
+        }
+      : null,
+    Number.isFinite(hotel.rating)
+      ? {
+          id: 'rating',
+          label: 'Guest rating',
+          value: `${hotel.rating}/5`,
+          icon: (
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M12 2.25l2.27 6.62h6.96l-5.6 4.07 2.14 6.71L12 16.9l-5.77 4.75 2.14-6.71-5.6-4.07h6.96L12 2.25z" />
+            </svg>
+          )
+        }
+      : null,
+    scheduleText
+      ? {
+          id: 'schedule',
+          label: 'Check-in & out',
+          value: scheduleText,
+          icon: (
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 10.59V7h-2v7h6v-2z" />
+            </svg>
+          )
+        }
+      : null,
+    primaryInclusion
+      ? {
+          id: 'inclusion',
+          label: 'What’s included',
+          value: primaryInclusion,
+          icon: (
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M9.75 16.25l-3.5-3.5L8.5 10.5l1.25 1.26 4.75-4.76 2.25 2.25zm2.25-12A8 8 0 1 0 20 12a8 8 0 0 0-8-8z" />
+            </svg>
+          )
+        }
+      : null,
+    hotel.bookingBenefits && hotel.bookingBenefits.length > 0
+      ? {
+          id: 'benefits',
+          label: 'Why book with us',
+          value: hotel.bookingBenefits.slice(0, 2).join(' · '),
+          icon: (
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M12 2l2.09 6.41h6.74l-5.45 3.96 2.08 6.38L12 15.21l-5.46 3.54 2.08-6.38-5.45-3.96h6.74z" />
+            </svg>
+          )
+        }
+      : null,
+    hotel.amenities && hotel.amenities.length > 0
+      ? {
+          id: 'amenities',
+          label: 'Amenities',
+          value: hotel.amenities.slice(0, 2).join(' · '),
+          icon: (
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M4 6h16v2H4zm2 4h12v8a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2zm3 2v6h6v-6z" />
+            </svg>
+          )
+        }
+      : null,
+    hotel.interiors && hotel.interiors.length > 0
+      ? {
+          id: 'interiors',
+          label: 'Interior features',
+          value: hotel.interiors.slice(0, 2).join(' · '),
+          icon: (
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M4 4h16v4H4zm2 6h12v10H6zm3 2v6h6v-6z" />
+            </svg>
+          )
+        }
+      : null
+  ].filter(Boolean);
+
   return (
     <article className="hotel-detail-section" aria-label={`${hotel.name} details`}>
       <div className="hotel-hero-media">
         <img src={hotel.image} alt={hotel.alt} onError={(e)=>{e.currentTarget.onerror=null; e.currentTarget.src='https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1600&auto=format&fit=crop';}} />
-        <div className="hotel-hero-overlay">
-          <div className="hotel-hero-container">
-            <button type="button" className="back-button" onClick={() => navigate(-1)} aria-label="Go back">← Back</button>
-            <div className="hero-text">
-              <h1 className="hero-hotel-name">{hotel.name}</h1>
-              <p className="hero-hotel-location">{hotel.location}</p>
-            </div>
+        <div className="hotel-hero-overlay" />
+        <div className="hotel-hero-container">
+          <button type="button" className="back-button" onClick={() => navigate(-1)} aria-label="Go back">← Back</button>
+          <div className="hero-text">
+            <h1 className="hero-hotel-name">{hotel.name}</h1>
+            <p className="hero-hotel-location">{hotel.location}</p>
           </div>
         </div>
       </div>
@@ -64,6 +155,19 @@ const HotelDetail = () => {
         <div className="hotel-body">
           <div>
             <section className="hotel-overview" aria-labelledby="overview-title">
+              {keyDetails.length > 0 && (
+                <div className="hotel-key-points" aria-label="Property highlights">
+                  {keyDetails.map((detail) => (
+                    <div key={detail.id} className="key-point-item">
+                      <span className="key-point-icon" aria-hidden="true">{detail.icon}</span>
+                      <span className="key-point-copy">
+                        <span className="key-point-label">{detail.label}</span>
+                        <span className="key-point-value">{detail.value}</span>
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              )}
               <h2 id="overview-title" className="section-heading">Overview</h2>
               <p className="hotel-detail-text">{hotel.description}</p>
 
@@ -99,7 +203,14 @@ const HotelDetail = () => {
                   <h2 id="inclusions-title" className="section-heading">What’s included</h2>
                   <ul className="inclusions-list">
                     {hotel.inclusions.map((item) => (
-                      <li key={item} className="inclusion-item">{item}</li>
+                      <li key={item} className="inclusion-item">
+                        <span className="detail-point-icon" aria-hidden="true">
+                          <svg viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M9.75 16.25l-3.5-3.5L8.5 10.5l1.25 1.26 4.75-4.76 2.25 2.25zm2.25-12A8 8 0 1 0 20 12a8 8 0 0 0-8-8z" />
+                          </svg>
+                        </span>
+                        <span className="detail-point-text">{item}</span>
+                      </li>
                     ))}
                   </ul>
                 </section>
@@ -111,8 +222,12 @@ const HotelDetail = () => {
                   <ul className="benefits-list">
                     {hotel.bookingBenefits.map((b) => (
                       <li key={b} className="benefit-item">
-                        <span className="benefit-icon" aria-hidden="true" />
-                        <span className="benefit-text">{b}</span>
+                        <span className="detail-point-icon" aria-hidden="true">
+                          <svg viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M12 2l2.5 6.91L22 9.5l-5 4.32L18.18 21 12 17.27 5.82 21 7 13.82 2 9.5l7.5-.59z" />
+                          </svg>
+                        </span>
+                        <span className="detail-point-text">{b}</span>
                       </li>
                     ))}
                   </ul>
@@ -219,7 +334,14 @@ const HotelDetail = () => {
                 <h2 id="amenities-title" className="section-heading">Amenities</h2>
                 <ul className="amenities-list">
                   {hotel.amenities.map((a) => (
-                    <li key={a} className="amenity-item">{a}</li>
+                    <li key={a} className="amenity-item">
+                      <span className="detail-point-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                          <path fill="currentColor" d="M7 4h10a2 2 0 0 1 2 2v8h-2v6h-2v-6H9v6H7v-6H5V6a2 2 0 0 1 2-2zm0 2v6h10V6z" />
+                        </svg>
+                      </span>
+                      <span className="detail-point-text">{a}</span>
+                    </li>
                   ))}
                 </ul>
               </section>
@@ -231,8 +353,12 @@ const HotelDetail = () => {
                 <ul className="interiors-grid">
                   {hotel.interiors.map((feat) => (
                     <li key={feat} className="interior-item">
-                      <span className="interior-icon" aria-hidden="true" />
-                      <span className="interior-label">{feat}</span>
+                      <span className="detail-point-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                          <path fill="currentColor" d="M4 5h16v2H4zm2 4h12v10H6zm3 2v6h6v-6z" />
+                        </svg>
+                      </span>
+                      <span className="detail-point-text">{feat}</span>
                     </li>
                   ))}
                 </ul>

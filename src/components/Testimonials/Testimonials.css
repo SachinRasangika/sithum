@@ -19,7 +19,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 124px;
+  margin: 40px 0 124px;
   position: relative;
 }
 
@@ -53,13 +53,12 @@
   text-align: center;
   margin: 0;
   position: relative;
+  padding: 0 16px;
 }
 
 /* Testimonials Content */
 .testimonials-content {
   position: relative;
-  border-top: 1px solid #D9D9D9;
-  border-bottom: 1px solid #D9D9D9;
 }
 
 .testimonials-list {

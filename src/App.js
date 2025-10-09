@@ -28,8 +28,8 @@ function HomePage() {
       <SafariBeach />
       <OurService />
       <Packages />
-      <SafariStyle />
       <OurWorlds />
+      <SafariStyle />
       <Testimonials />
     </>
   );

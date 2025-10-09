@@ -133,6 +133,9 @@
   .enquire-button svg { width: 32px; height: 32px; }
   .nav-item span { font-size: 13px; }
   .dropdown-panel { left: 0; transform: translateX(0) translateY(8px); }
+  /* Shrink language/currency pills on mobile */
+  .pill-trigger { height: 44px; padding: 7px 12px; gap: 8px; }
+  .pill-label, .pill-value { font-size: 12px; }
 }
 
 @media (max-width: 480px) {
@@ -150,4 +153,7 @@
   .main-logo { width: 32px; height: 32px; }
   .nav-links { gap: 20px; }
   .nav-item span { font-size: 12px; }
+  /* Extra small: even smaller pills */
+  .pill-trigger { height: 40px; padding: 6px 10px; }
+  .pill-label, .pill-value { font-size: 11px; }
 }
