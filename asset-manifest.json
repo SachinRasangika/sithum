@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.b919c5ee.css",
-    "main.js": "./static/js/main.e57ea245.js",
+    "main.js": "./static/js/main.dce10cb7.js",
     "static/js/465.8a777777.chunk.js": "./static/js/465.8a777777.chunk.js",
     "static/js/930.e617c1f5.chunk.js": "./static/js/930.e617c1f5.chunk.js",
     "static/js/511.bf0cc4bc.chunk.js": "./static/js/511.bf0cc4bc.chunk.js",
@@ -10,13 +10,13 @@
     "static/media/sithuma-wordmark.svg": "./static/media/sithuma-wordmark.3679dc6296414f8365b6897001537cde.svg",
     "static/media/sithuma-mark.svg": "./static/media/sithuma-mark.b6518dbaa20e135df59163abc71ca124.svg",
     "main.b919c5ee.css.map": "./static/css/main.b919c5ee.css.map",
-    "main.e57ea245.js.map": "./static/js/main.e57ea245.js.map",
+    "main.dce10cb7.js.map": "./static/js/main.dce10cb7.js.map",
     "465.8a777777.chunk.js.map": "./static/js/465.8a777777.chunk.js.map",
     "930.e617c1f5.chunk.js.map": "./static/js/930.e617c1f5.chunk.js.map",
     "511.bf0cc4bc.chunk.js.map": "./static/js/511.bf0cc4bc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b919c5ee.css",
-    "static/js/main.e57ea245.js"
+    "static/js/main.dce10cb7.js"
   ]
 }
