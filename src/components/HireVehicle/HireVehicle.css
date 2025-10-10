@@ -7,12 +7,16 @@
 /* Map card */
 .hv-map-card { background: #fff; border: 1px solid #E1E1E1; border-radius: 12px; box-shadow: 0 14px 40px rgba(0,0,0,.06); padding: 16px; }
 .hv-map-toolbar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 12px; }
-.hv-search-group { display: flex; gap: 8px; }
+.hv-search-group { display: flex; gap: 8px; position: relative; }
 .hv-input { height: 44px; border-radius: 10px; border: 1px solid #030922; padding: 0 12px; font-size: 14px; color: #030922; background: #fff; }
 .hv-textarea { border-radius: 10px; border: 1px solid #030922; padding: 10px 12px; font-size: 14px; color: #030922; background: #fff; }
 .hv-btn { height: 44px; padding: 0 12px; border-radius: 10px; border: 1px solid #030922; background: transparent; color: #030922; cursor: pointer; }
 .hv-btn:hover { background: #030922; color: #fff; }
 .hv-pick-hint { margin-left: auto; color: #0b4973; font-size: 13px; }
+.hv-suggest-box { width: 100%; max-width: 520px; }
+.hv-suggest-list { position: absolute; top: 46px; left: 0; right: 0; background: #fff; border: 1px solid #E1E1E1; border-radius: 10px; box-shadow: 0 18px 40px rgba(2,12,60,.18); z-index: 10; padding: 6px; max-height: 260px; overflow: auto; }
+.hv-suggest-item { padding: 10px 10px; border-radius: 8px; color: #030922; cursor: pointer; font-size: 14px; }
+.hv-suggest-item:hover { background: #f6f8fc; }
 .hv-map { width: 100%; height: 420px; border-radius: 10px; overflow: hidden; }
 .hv-map-placeholder { width: 100%; height: 420px; border-radius: 10px; display: grid; place-items: center; background: #F5F7FA; color: #0b4973; text-align: center; padding: 16px; }
 .hv-metrics { display: flex; gap: 16px; margin-top: 10px; }

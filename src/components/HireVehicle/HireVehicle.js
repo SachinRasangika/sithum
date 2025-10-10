@@ -23,6 +23,10 @@ export default function HireVehicle() {
   const [durationMin, setDurationMin] = useState('');
   const [searchFrom, setSearchFrom] = useState('');
   const [searchTo, setSearchTo] = useState('');
+  const [suggestFrom, setSuggestFrom] = useState([]);
+  const [suggestTo, setSuggestTo] = useState([]);
+  const fromBoxRef = useRef(null);
+  const toBoxRef = useRef(null);
   const [form, setForm] = useState({
     fullName: '',
     contactNumber: '',
@@ -83,6 +87,16 @@ export default function HireVehicle() {
     return () => { disposed = true; if (mapInstanceRef.current) { if (mapInstanceRef.current.remove) mapInstanceRef.current.remove(); } };
   }, [canUseMapbox, pickStartNext]);
 
+  // Hide suggestions when clicking outside
+  useEffect(() => {
+    const onDoc = (e) => {
+      if (fromBoxRef.current && !fromBoxRef.current.contains(e.target)) setSuggestFrom([]);
+      if (toBoxRef.current && !toBoxRef.current.contains(e.target)) setSuggestTo([]);
+    };
+    document.addEventListener('mousedown', onDoc);
+    return () => document.removeEventListener('mousedown', onDoc);
+  }, []);
+
   useEffect(() => {
     if (!start || !end || !canUseMapbox) return;
     drawRoute();
@@ -110,6 +124,43 @@ export default function HireVehicle() {
       const L = leafletRef.current;
       endMarkerRef.current = L.circleMarker([lngLat.lat, lngLat.lng], { radius: 8, color: '#00a36c', fillColor: '#00a36c', fillOpacity: 1 }).addTo(mapInstanceRef.current);
     }
+  }
+
+  // Fetch autocomplete suggestions (free Nominatim when no token)
+  let suggestTimer;
+  async function fetchSuggestions(query, which) {
+    if (!query || query.trim().length < 2) { if (which==='from') setSuggestFrom([]); else setSuggestTo([]); return; }
+    clearTimeout(suggestTimer);
+    suggestTimer = setTimeout(async () => {
+      if (canUseMapbox) {
+        const url = new URL('https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(query) + '.json');
+        url.searchParams.set('access_token', MAPBOX_TOKEN);
+        url.searchParams.set('limit', '6');
+        url.searchParams.set('country', 'lk');
+        const res = await fetch(url.toString());
+        const data = await res.json();
+        const items = (data.features||[]).map(f => ({ label: f.place_name, lng: f.center[0], lat: f.center[1] }));
+        if (which==='from') setSuggestFrom(items); else setSuggestTo(items);
+      } else {
+        const url = new URL('https://nominatim.openstreetmap.org/search');
+        url.searchParams.set('q', query);
+        url.searchParams.set('format', 'json');
+        url.searchParams.set('limit', '6');
+        url.searchParams.set('countrycodes', 'lk');
+        url.searchParams.set('addressdetails', '1');
+        const res = await fetch(url.toString(), { headers: { 'Accept': 'application/json' } });
+        const data = await res.json();
+        const items = (data||[]).map(f => ({ label: f.display_name, lng: parseFloat(f.lon), lat: parseFloat(f.lat) }));
+        if (which==='from') setSuggestFrom(items); else setSuggestTo(items);
+      }
+    }, 250);
+  }
+
+  function pickSuggestion(item, which) {
+    if (which==='from') { setSearchFrom(item.label); placeStart({ lng: item.lng, lat: item.lat }); setSuggestFrom([]); }
+    else { setSearchTo(item.label); placeEnd({ lng: item.lng, lat: item.lat }); setSuggestTo([]); }
+    if (leafletRef.current && mapInstanceRef.current?.setView) mapInstanceRef.current.setView([item.lat, item.lng], 10);
+    if (mapboxRef.current?.flyTo) mapInstanceRef.current?.flyTo({ center: [item.lng, item.lat], zoom: 10 });
   }
 
   async function geocode(query, which) {
@@ -242,13 +293,29 @@ export default function HireVehicle() {
 
       <div className="hv-map-card">
         <div className="hv-map-toolbar">
-          <div className="hv-search-group">
-            <input className="hv-input" type="text" placeholder="Start location" value={searchFrom} onChange={(e) => setSearchFrom(e.target.value)} />
+          <div className="hv-search-group hv-suggest-box" ref={fromBoxRef}>
+            <input className="hv-input" type="text" placeholder="Start location" value={searchFrom}
+              onChange={(e) => { setSearchFrom(e.target.value); fetchSuggestions(e.target.value, 'from'); }} />
             <button className="hv-btn" disabled={disabledSearch} onClick={() => geocode(searchFrom, 'from')}>Set Start</button>
+            {suggestFrom.length > 0 && (
+              <ul className="hv-suggest-list" role="listbox" aria-label="Start suggestions">
+                {suggestFrom.map((s, i) => (
+                  <li key={i} className="hv-suggest-item" role="option" onClick={() => pickSuggestion(s, 'from')}>{s.label}</li>
+                ))}
+              </ul>
+            )}
           </div>
-          <div className="hv-search-group">
-            <input className="hv-input" type="text" placeholder="End location" value={searchTo} onChange={(e) => setSearchTo(e.target.value)} />
+          <div className="hv-search-group hv-suggest-box" ref={toBoxRef}>
+            <input className="hv-input" type="text" placeholder="End location" value={searchTo}
+              onChange={(e) => { setSearchTo(e.target.value); fetchSuggestions(e.target.value, 'to'); }} />
             <button className="hv-btn" disabled={disabledSearch} onClick={() => geocode(searchTo, 'to')}>Set End</button>
+            {suggestTo.length > 0 && (
+              <ul className="hv-suggest-list" role="listbox" aria-label="End suggestions">
+                {suggestTo.map((s, i) => (
+                  <li key={i} className="hv-suggest-item" role="option" onClick={() => pickSuggestion(s, 'to')}>{s.label}</li>
+                ))}
+              </ul>
+            )}
           </div>
           <div className="hv-pick-hint">{pickStartNext ? 'Click map to pick Start' : 'Click map to pick End'}</div>
         </div>
