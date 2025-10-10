@@ -1,18 +1,22 @@
 {
   "files": {
-    "main.css": "./static/css/main.8f7ec575.css",
-    "main.js": "./static/js/main.3debb97f.js",
+    "main.css": "./static/css/main.91775767.css",
+    "main.js": "./static/js/main.efa4c661.js",
+    "static/js/465.8a777777.chunk.js": "./static/js/465.8a777777.chunk.js",
+    "static/js/930.e617c1f5.chunk.js": "./static/js/930.e617c1f5.chunk.js",
     "static/js/511.bf0cc4bc.chunk.js": "./static/js/511.bf0cc4bc.chunk.js",
     "static/media/package-placeholder.svg": "./static/media/package-placeholder.1a221555c922194526bfb1392b9ccf7b.svg",
     "index.html": "./index.html",
     "static/media/sithuma-wordmark.svg": "./static/media/sithuma-wordmark.3679dc6296414f8365b6897001537cde.svg",
     "static/media/sithuma-mark.svg": "./static/media/sithuma-mark.b6518dbaa20e135df59163abc71ca124.svg",
-    "main.8f7ec575.css.map": "./static/css/main.8f7ec575.css.map",
-    "main.3debb97f.js.map": "./static/js/main.3debb97f.js.map",
+    "main.91775767.css.map": "./static/css/main.91775767.css.map",
+    "main.efa4c661.js.map": "./static/js/main.efa4c661.js.map",
+    "465.8a777777.chunk.js.map": "./static/js/465.8a777777.chunk.js.map",
+    "930.e617c1f5.chunk.js.map": "./static/js/930.e617c1f5.chunk.js.map",
     "511.bf0cc4bc.chunk.js.map": "./static/js/511.bf0cc4bc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f7ec575.css",
-    "static/js/main.3debb97f.js"
+    "static/css/main.91775767.css",
+    "static/js/main.efa4c661.js"
   ]
 }
