@@ -5,6 +5,10 @@
 /* Hero */
 .simple-hero { padding: 120px 0 60px; border-bottom: 1px solid #f0f2f6; }
 .simple-eyebrow { margin: 0 0 10px; font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #6b7280; text-align: center; }
+.simple-hero-divider { display: flex; align-items: center; justify-content: center; margin: 6px 0 10px; }
+.simple-divider-line { display: inline-block; width: 140px; height: 1px; background: #030922; opacity: .22; }
+.simple-title-wrap { display: flex; align-items: center; justify-content: center; gap: 24px; margin: 0 0 4px; }
+.simple-deco { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; }
 .simple-title { margin: 0; font-family: 'Georgia', serif; font-weight: 400; font-size: clamp(40px, 5.6vw, 64px); line-height: 1.08; text-align: center; }
 .simple-sub { margin: 12px auto 0; max-width: 760px; font-family: 'Inter', sans-serif; font-size: 18px; line-height: 32px; color: #1b2548; text-align: center; }
 .simple-actions { display: flex; gap: 12px; margin-top: 22px; flex-wrap: wrap; align-items: center; justify-content: center; }

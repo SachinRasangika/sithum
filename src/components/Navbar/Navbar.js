@@ -29,8 +29,13 @@ export default function Navbar() {
         setCurrencyOpen(false);
       }
     };
+    const onOpenMobileMenu = () => setMenuOpen(true);
     window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
+    window.addEventListener('open-mobile-menu', onOpenMobileMenu);
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      window.removeEventListener('open-mobile-menu', onOpenMobileMenu);
+    };
   }, []);
 
   useEffect(() => {
@@ -48,24 +53,26 @@ export default function Navbar() {
     firstFocusable?.focus();
   }, [menuOpen]);
 
+  useEffect(() => {
+    const html = document.documentElement;
+    const body = document.body;
+    if (menuOpen) {
+      const prevHtmlOverflow = html.style.overflow;
+      const prevBodyOverflow = body.style.overflow;
+      html.style.overflow = 'hidden';
+      body.style.overflow = 'hidden';
+      return () => {
+        html.style.overflow = prevHtmlOverflow;
+        body.style.overflow = prevBodyOverflow;
+      };
+    }
+  }, [menuOpen]);
+
   return (
     <nav className={`navbar${scrolled ? ' is-scrolled' : ''}`} role="navigation" aria-label="Main Navigation">
       <div className="navbar-top">
         <div className="navbar-top-content">
           <div className="navbar-left">
-            <button
-              className="hamburger-menu"
-              aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-              aria-expanded={menuOpen}
-              aria-controls="mobile-drawer"
-              onClick={() => setMenuOpen((v) => !v)}
-            >
-              <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/d26dcc2dfa86d786e538c5e5737c9742cf2c342c?width=120"
-                alt=""
-                className="hamburger-icon"
-              />
-            </button>
 
             <div className="logo-container">
               <div className="logo-icons" aria-hidden="true">

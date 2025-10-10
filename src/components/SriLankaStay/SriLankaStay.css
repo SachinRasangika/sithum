@@ -8,6 +8,12 @@
 .stays-title { font-family: 'Georgia', serif; font-size: 46px; font-weight: 400; line-height: 58px; letter-spacing: .2px; color: #030922; margin: 0; }
 .stays-subtitle { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 300; line-height: 28px; letter-spacing: .5px; color: #1b2548; margin: 0 auto; max-width: 720px; }
 
+/* Contact-like hero elements for stays */
+.stays-badge { display: inline-block; margin: 8px 0 10px; padding: 6px 10px; border-radius: 999px; border: 1px solid #e5e7eb; background: #fff; color: #030922; font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; position: relative; z-index: 1; }
+.stays-hero-divider { display: inline-flex; align-items: center; justify-content: center; margin: 6px 0 10px; position: relative; z-index: 1; width: 100%; }
+.stays-divider-line { display: inline-block; width: 140px; height: 1px; background: #030922; opacity: .22; }
+.stays-hero-subtitle { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 300; line-height: 28px; letter-spacing: .5px; color: #1b2548; margin: 0 auto; max-width: 720px; position: relative; z-index: 1; }
+
 .stays-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
 
 .stay-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 0 rgba(2,12,60,.02); display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s; }
@@ -32,4 +38,4 @@
 @media (max-width: 1440px) { .stays-container { padding: 0 120px; } .stays-grid { gap: 24px; } }
 @media (max-width: 1024px) { .stays-container { padding: 0 60px; } .stays-grid { grid-template-columns: repeat(2, 1fr); } .stay-media{ height: 240px; } }
 @media (max-width: 768px) { .stays-container { padding: 0 20px; } .stays-title-wrap { flex-direction: column; gap: 15px; } .stays-grid { grid-template-columns: 1fr; gap: 18px; } .stays-title { font-size: 32px; line-height: 42px; } .stays-subtitle { font-size: 14px; line-height: 22px; } .stay-media{ height: 220px; } }
-@media (max-width: 480px) { .stays-title { font-size: 28px; line-height: 36px; } .stays-subtitle { font-size: 13px; line-height: 20px; } .stay-view { width: 100%; height: 45px; } }
+@media (max-width: 480px) { .stays-title { font-size: 28px; line-height: 36px; } .stays-subtitle, .stays-hero-subtitle { font-size: 13px; line-height: 20px; } .stay-view { width: 100%; height: 45px; } }
