@@ -10,9 +10,11 @@ export default function Navbar() {
   const [currencyOpen, setCurrencyOpen] = useState(false);
   const [language, setLanguage] = useState('EN');
   const [currency, setCurrency] = useState('USD');
+  const [servicesOpen, setServicesOpen] = useState(false);
   const drawerRef = useRef(null);
   const langRef = useRef(null);
   const currRef = useRef(null);
+  const servicesRef = useRef(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 4);
@@ -27,6 +29,7 @@ export default function Navbar() {
         setMenuOpen(false);
         setLanguageOpen(false);
         setCurrencyOpen(false);
+        setServicesOpen(false);
       }
     };
     const onOpenMobileMenu = () => setMenuOpen(true);
@@ -42,10 +45,11 @@ export default function Navbar() {
     const onClickOutside = (e) => {
       if (languageOpen && langRef.current && !langRef.current.contains(e.target)) setLanguageOpen(false);
       if (currencyOpen && currRef.current && !currRef.current.contains(e.target)) setCurrencyOpen(false);
+      if (servicesOpen && servicesRef.current && !servicesRef.current.contains(e.target)) setServicesOpen(false);
     };
     document.addEventListener('mousedown', onClickOutside);
     return () => document.removeEventListener('mousedown', onClickOutside);
-  }, [languageOpen, currencyOpen]);
+  }, [languageOpen, currencyOpen, servicesOpen]);
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -165,6 +169,14 @@ export default function Navbar() {
             <Link className="nav-item" to="/about" role="menuitem"><span>About</span></Link>
             <Link className="nav-item" to="/packages" role="menuitem"><span>Tour Packages</span></Link>
             <Link className="nav-item" to="/sri-lanka-stay" role="menuitem"><span>Sri Lanka Stays</span></Link>
+            <div className={`dropdown${servicesOpen ? ' is-open' : ''}`} role="none" ref={servicesRef}>
+              <button className="nav-trigger" aria-haspopup="true" aria-expanded={servicesOpen} onClick={() => setServicesOpen(v => !v)}><span>Services</span>
+                <svg viewBox="0 0 14 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 1l6 6 6-6" stroke="#fff" strokeWidth="2" fill="none" strokeLinecap="round"/></svg>
+              </button>
+              <div className="dropdown-panel" role="menu" aria-label="Services">
+                <Link className="drop-link" to="/hire-vehicle" role="menuitem">Hire a Vehicle</Link>
+              </div>
+            </div>
             <Link className="nav-item" to="/contact" role="menuitem"><span>Contact</span></Link>
           </div>
         </div>
@@ -183,6 +195,7 @@ export default function Navbar() {
           <Link to="/packages" onClick={() => setMenuOpen(false)}>Tour Packages</Link>
           <Link to="/sri-lanka-stay" onClick={() => setMenuOpen(false)}>Sri Lanka Stays</Link>
           <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
+          <Link to="/hire-vehicle" onClick={() => setMenuOpen(false)}>Hire a Vehicle</Link>
         </nav>
         <div className="drawer-controls">
           <div className="drawer-select-group">

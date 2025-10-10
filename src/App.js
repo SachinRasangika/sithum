@@ -18,6 +18,7 @@ import BottomNav from './components/BottomNav/BottomNav';
 import HotelDetail from './components/HotelDetail/HotelDetail';
 import SriLankaStay from './components/SriLankaStay/SriLankaStay';
 import AboutPage from './components/AboutPage/AboutPage';
+import HireVehicle from './components/HireVehicle/HireVehicle';
 
 function HomePage() {
   return (
@@ -51,6 +52,7 @@ function App() {
             <Route path="/sri-lanka-stay" element={<SriLankaStay />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactUs />} />
+            <Route path="/hire-vehicle" element={<HireVehicle />} />
           </Routes>
         </main>
         <div className="bottom-nav-spacer" />
