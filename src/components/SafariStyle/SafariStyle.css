@@ -29,7 +29,7 @@
   font-weight: 400;
   line-height: 64px;
   letter-spacing: 0.2px;
-  color: #030922;
+  color: #015D5F;
   margin: 0;
 }
 
@@ -53,7 +53,7 @@
   font-weight: 300;
   line-height: 32px;
   letter-spacing: 0.66px;
-  color: #030922;
+  color: #015D5F;
   text-align: center;
   margin: 0 auto 136px;
   max-width: 595px;
@@ -88,7 +88,7 @@
   left: 0;
   width: 496px;
   height: 469px;
-  background: #030922;
+  background: #015D5F;
   padding: 60px;
   display: flex;
   flex-direction: column;
@@ -161,7 +161,7 @@
   bottom: 12px;
   right: 12px;
   padding: 6px 12px;
-  background: #FAF1EE;
+  background: #B88A4A;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -183,7 +183,7 @@
   line-height: 17px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  color: #030922;
+  color: #FFFFFF;
 }
 
 /* View Button */
@@ -194,7 +194,7 @@
   width: 108px;
   height: 108px;
   border-radius: 54px;
-  background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(3, 9, 34, 0.77) 0%, #030922 100%);
+  background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(1, 93, 95, 0.77) 0%, #015D5F 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -238,7 +238,7 @@
   font-size: 32px;
   font-weight: 400;
   line-height: 41px;
-  color: #030922;
+  color: #015D5F;
   margin: 0 0 7px 0;
 }
 
@@ -264,7 +264,7 @@
 
 .view-more-divider {
   height: 1px;
-  border-top: 1px solid #D9D9D9;
+  border-top: 1px solid #9EA8B3;
   flex: 1;
   max-width: 840px;
 }
@@ -275,7 +275,7 @@
   justify-content: center;
   width: 200px;
   height: 62px;
-  border: 1px solid rgba(217, 217, 217, 0.5);
+  border: 1px solid rgba(158, 168, 179, 0.5);
   background: transparent;
   font-family: 'Inter', sans-serif;
   font-size: 15px;
@@ -283,15 +283,15 @@
   line-height: 16px;
   letter-spacing: 1.4px;
   text-transform: uppercase;
-  color: #030922;
+  color: #015D5F;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .view-more-button:hover {
-  background: #030922;
+  background: #015D5F;
   color: #ffffff;
-  border-color: #030922;
+  border-color: #015D5F;
 }
 
 /* Responsive Styles */
@@ -379,7 +379,7 @@
     height: 300px;
     padding: 40px;
     position: relative;
-    background: rgba(3, 9, 34, 0.9);
+    background: rgba(1, 93, 95, 0.9);
   }
   
   .featured-lodge-name {
@@ -457,20 +457,20 @@
 
 /* Hotel Modal */
 .hotel-modal-overlay { position: fixed; inset: 0; z-index: 1200; display: grid; place-items: center; }
-.hotel-modal-backdrop { position: fixed; inset: 0; background: rgba(3, 9, 34, 0.5); border: 0; padding: 0; margin: 0; }
-.hotel-modal { position: relative; width: min(960px, 92vw); max-height: 90vh; background: #FFFFFF; border: 1px solid #D9D9D9; box-shadow: 0 30px 80px rgba(3,9,34,0.35); border-radius: 16px; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; }
-.hotel-modal-close { position: absolute; top: 10px; right: 10px; width: 36px; height: 36px; border-radius: 18px; border: 1px solid #030922; background: #FFFFFF; color: #030922; cursor: pointer; }
+.hotel-modal-backdrop { position: fixed; inset: 0; background: rgba(1, 93, 95, 0.5); border: 0; padding: 0; margin: 0; }
+.hotel-modal { position: relative; width: min(960px, 92vw); max-height: 90vh; background: #FFFFFF; border: 1px solid #9EA8B3; box-shadow: 0 30px 80px rgba(1,93,95,0.35); border-radius: 16px; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; }
+.hotel-modal-close { position: absolute; top: 10px; right: 10px; width: 36px; height: 36px; border-radius: 18px; border: 1px solid #015D5F; background: #FFFFFF; color: #015D5F; cursor: pointer; }
 .hotel-modal-media { position: relative; height: 100%; }
 .hotel-modal-media img { width: 100%; height: 100%; object-fit: cover; }
 .hotel-modal-content { padding: 24px 24px 28px; display: flex; flex-direction: column; gap: 10px; }
-.hotel-modal-title { font-family: 'Georgia', serif; font-size: 28px; font-weight: 400; line-height: 36px; color: #030922; margin: 0; }
+.hotel-modal-title { font-family: 'Georgia', serif; font-size: 28px; font-weight: 400; line-height: 36px; color: #015D5F; margin: 0; }
 .hotel-modal-location { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 300; letter-spacing: 1px; text-transform: uppercase; color: #787878; margin: 0; }
-.hotel-modal-description { font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 300; line-height: 24px; color: #030922; margin: 8px 0 0 0; }
+.hotel-modal-description { font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 300; line-height: 24px; color: #333333; margin: 8px 0 0 0; }
 .hotel-modal-actions { margin-top: auto; display: flex; align-items: center; gap: 10px; }
-.hotel-modal-cta { display: inline-flex; align-items: center; justify-content: center; height: 48px; padding: 0 18px; background: #030922; color: #FFFFFF; text-decoration: none; border: 1px solid #030922; letter-spacing: 1.2px; text-transform: uppercase; font-family: 'Inter', sans-serif; font-size: 13px; }
-.hotel-modal-cta:hover { background: transparent; color: #030922; }
-.hotel-modal-secondary { display: inline-flex; align-items: center; justify-content: center; height: 48px; padding: 0 18px; background: transparent; color: #030922; text-decoration: none; border: 1px solid #D9D9D9; letter-spacing: 1.2px; text-transform: uppercase; font-family: 'Inter', sans-serif; font-size: 13px; }
-.hotel-modal-secondary:hover { background: #030922; color: #FFFFFF; border-color: #030922; }
+.hotel-modal-cta { display: inline-flex; align-items: center; justify-content: center; height: 48px; padding: 0 18px; background: #015D5F; color: #FFFFFF; text-decoration: none; border: 1px solid #015D5F; letter-spacing: 1.2px; text-transform: uppercase; font-family: 'Inter', sans-serif; font-size: 13px; }
+.hotel-modal-cta:hover { background: transparent; color: #015D5F; }
+.hotel-modal-secondary { display: inline-flex; align-items: center; justify-content: center; height: 48px; padding: 0 18px; background: transparent; color: #015D5F; text-decoration: none; border: 1px solid #9EA8B3; letter-spacing: 1.2px; text-transform: uppercase; font-family: 'Inter', sans-serif; font-size: 13px; }
+.hotel-modal-secondary:hover { background: #015D5F; color: #FFFFFF; border-color: #015D5F; }
 
 @media (max-width: 768px) {
   .hotel-modal { grid-template-columns: 1fr; width: 94vw; }

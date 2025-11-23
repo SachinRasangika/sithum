@@ -1,6 +1,6 @@
 /* Footer */
 .site-footer {
-  background: #030922;
+  background: #015D5F;
   color: #FAFAFA;
   width: 100%;
   position: relative;
@@ -39,7 +39,7 @@
 .footer-divider-bottom {
   width: 100%;
   height: 1px;
-  border-top: 1px solid rgba(217, 217, 217, 0.5);
+  border-top: 1px solid rgba(158, 168, 179, 0.5);
 }
 
 .footer-divider-top {
@@ -125,7 +125,7 @@
 .footer-contact-divider {
   width: 1px;
   height: 152px;
-  border-right: 1px solid #D9D9D9;
+  border-right: 1px solid #9EA8B3;
   opacity: 0.5;
   background: #FAFAFA;
   margin: 0 80px;

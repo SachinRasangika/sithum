@@ -1,7 +1,7 @@
 /* Safari Celebrate Section - Pixel Perfect Figma Design */
 .safari-celebrate-section {
   width: 100%;
-  background: #030922;
+  background: #015D5F;
   color: #FCF8F7;
   padding: 110px 184px;
   overflow: hidden;
@@ -145,7 +145,7 @@
 .safari-card-image-container {
   width: 496px;
   height: 645px;
-  background: #FCF8F7;
+  background: #DDEEF6;
   overflow: hidden;
   display: flex;
   justify-content: center;

@@ -49,7 +49,7 @@
   font-weight: 400;
   line-height: 64px;
   letter-spacing: 0.2px;
-  color: #030922;
+  color: #015D5F;
   text-align: center;
   margin: 0;
   position: relative;
@@ -74,7 +74,7 @@
   text-align: center;
   padding: 43px 44px 47px 44px;
   height: 382px;
-  border-right: 1px solid #D9D9D9;
+  border-right: 1px solid #9EA8B3;
   position: relative;
 }
 
@@ -111,7 +111,7 @@
   font-weight: 300;
   line-height: 32px;
   letter-spacing: 0.66px;
-  color: #030922;
+  color: #333333;
   margin: 0 0 45px 0;
   flex-grow: 1;
   max-width: 433px;
@@ -145,7 +145,7 @@
   height: 60px;
   border-radius: 100px;
   border: none;
-  background: #FCF8F7;
+  background: #DDEEF6;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -156,7 +156,7 @@
 
 .nav-button:hover {
   opacity: 1;
-  background: #030922;
+  background: #015D5F;
 }
 
 .nav-button:hover svg path {

@@ -3,13 +3,13 @@ html { scroll-behavior: smooth; }
 body { font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif; background-color: #ffffff; }
 .App { min-height: 100vh; }
 .skip-link { position: absolute; left: -999px; top: -999px; }
-.skip-link:focus { left: 16px; top: 16px; background: #030922; color: #fff; padding: 8px 12px; border-radius: 4px; }
+.skip-link:focus { left: 16px; top: 16px; background: #015D5F; color: #fff; padding: 8px 12px; border-radius: 4px; }
 .navbar-fixed-spacer { height: 154px; }
 
 /* Navbar Styles */
 .navbar {
   width: 100%;
-  border-bottom: 1px solid #E1E1E1;
+  border-bottom: 1px solid #9EA8B3;
   position: relative;
 }
 
@@ -84,7 +84,7 @@ body { font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif; backg
   width: 60px;
   height: 60px;
   border-radius: 60px;
-  border: 1px solid #030922;
+  border: 1px solid #015D5F;
   background: transparent;
   display: flex;
   align-items: center;
@@ -94,7 +94,7 @@ body { font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif; backg
 }
 
 .search-button:hover {
-  background-color: #030922;
+  background-color: #015D5F;
 }
 
 .search-button:hover svg path {
@@ -107,7 +107,7 @@ body { font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif; backg
   gap: 20px;
   padding: 9px 9px 9px 21px;
   border-radius: 50px;
-  border: 1px solid #030922;
+  border: 1px solid #B88A4A;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -116,7 +116,7 @@ body { font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif; backg
 }
 
 .enquire-button span {
-  color: #030922;
+  color: #015D5F;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.875px;
@@ -129,16 +129,16 @@ body { font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif; backg
 }
 
 .enquire-button:hover {
-  background-color: #030922;
+  background-color: #B88A4A;
 }
 
 .enquire-button:hover span {
   color: #ffffff;
 }
 
-/* Bottom section with dark navy background */
+/* Bottom section with deep teal background */
 .navbar-bottom {
-  background-color: #030922;
+  background-color: #015D5F;
   position: relative;
 }
 
@@ -205,14 +205,14 @@ body { font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif; backg
 
 .main-content h1 {
   font-size: 2.5rem;
-  color: #030922;
+  color: #015D5F;
   margin-bottom: 1rem;
   font-weight: 600;
 }
 
 .main-content p {
   font-size: 1.2rem;
-  color: #666;
+  color: #333333;
   font-weight: 300;
 }
 
@@ -330,7 +330,7 @@ body { font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif; backg
   justify-content: center;
   width: 250px;
   height: 75px;
-  border: 1px solid #FAF1EE;
+  border: 1px solid #B88A4A;
   background: transparent;
   color: #FCF8F7;
   font-family: 'Inter', sans-serif;
@@ -344,8 +344,8 @@ body { font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif; backg
 }
 
 .hero-cta-button:hover {
-  background: #FAF1EE;
-  color: #030922;
+  background: #B88A4A;
+  color: #FFFFFF;
 }
 
 .hero-contact-footer {
@@ -354,7 +354,7 @@ body { font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif; backg
   left: 0;
   width: 100%;
   height: 64px;
-  background: #030922;
+  background: #015D5F;
   z-index: 4;
   border-top: 1px solid #ffffff;
 }
@@ -426,7 +426,7 @@ body { font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif; backg
   font-weight: 400;
   line-height: 51.56px;
   letter-spacing: 0.2px;
-  color: #030922;
+  color: #015D5F;
   margin: 0 0 80px 0;
   max-width: 916px;
   margin-left: auto;
@@ -450,8 +450,8 @@ body { font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif; backg
   transform: translate(-50%, -50%);
   width: 100vw;
   height: 1px;
-  background: #D9D9D9;
-  border-top: 1px solid #D9D9D9;
+  background: #9EA8B3;
+  border-top: 1px solid #9EA8B3;
   z-index: 1;
 }
 

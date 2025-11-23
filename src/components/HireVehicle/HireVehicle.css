@@ -1,47 +1,47 @@
 /* Layout */
 .hire-vehicle-page { max-width: 1120px; margin: 0 auto; padding: 120px 20px 60px; }
 .hv-header { text-align: center; margin-bottom: 18px; }
-.hv-title { font-family: Georgia, serif; font-size: 36px; color: #030922; letter-spacing: .5px; margin: 0 0 6px; }
+.hv-title { font-family: Georgia, serif; font-size: 36px; color: #015D5F; letter-spacing: .5px; margin: 0 0 6px; }
 .hv-subtitle { color: #3b3b3b; margin: 0; }
 
 /* Map card */
-.hv-map-card { background: #fff; border: 1px solid #E1E1E1; border-radius: 12px; box-shadow: 0 14px 40px rgba(0,0,0,.06); padding: 16px; }
+.hv-map-card { background: #fff; border: 1px solid #9EA8B3; border-radius: 12px; box-shadow: 0 14px 40px rgba(0,0,0,.06); padding: 16px; }
 .hv-map-toolbar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 12px; }
 .hv-search-group { display: flex; gap: 8px; position: relative; }
-.hv-input { height: 44px; border-radius: 10px; border: 1px solid #030922; padding: 0 12px; font-size: 14px; color: #030922; background: #fff; }
-.hv-textarea { border-radius: 10px; border: 1px solid #030922; padding: 10px 12px; font-size: 14px; color: #030922; background: #fff; }
-.hv-btn { height: 44px; padding: 0 12px; border-radius: 10px; border: 1px solid #030922; background: transparent; color: #030922; cursor: pointer; }
-.hv-btn:hover { background: #030922; color: #fff; }
+.hv-input { height: 44px; border-radius: 10px; border: 1px solid #015D5F; padding: 0 12px; font-size: 14px; color: #015D5F; background: #fff; }
+.hv-textarea { border-radius: 10px; border: 1px solid #015D5F; padding: 10px 12px; font-size: 14px; color: #015D5F; background: #fff; }
+.hv-btn { height: 44px; padding: 0 12px; border-radius: 10px; border: 1px solid #015D5F; background: transparent; color: #015D5F; cursor: pointer; }
+.hv-btn:hover { background: #015D5F; color: #fff; }
 .hv-pick-hint { margin-left: auto; color: #0b4973; font-size: 13px; }
 .hv-suggest-box { width: 100%; max-width: 520px; }
-.hv-suggest-list { position: absolute; top: 46px; left: 0; right: 0; background: #fff; border: 1px solid #E1E1E1; border-radius: 10px; box-shadow: 0 18px 40px rgba(2,12,60,.18); z-index: 10; padding: 6px; max-height: 260px; overflow: auto; }
-.hv-suggest-item { padding: 10px 10px; border-radius: 8px; color: #030922; cursor: pointer; font-size: 14px; }
+.hv-suggest-list { position: absolute; top: 46px; left: 0; right: 0; background: #fff; border: 1px solid #9EA8B3; border-radius: 10px; box-shadow: 0 18px 40px rgba(1,93,95,.18); z-index: 10; padding: 6px; max-height: 260px; overflow: auto; }
+.hv-suggest-item { padding: 10px 10px; border-radius: 8px; color: #015D5F; cursor: pointer; font-size: 14px; }
 .hv-suggest-item:hover { background: #f6f8fc; }
 .hv-map { width: 100%; height: 420px; border-radius: 10px; overflow: hidden; }
 .hv-map-placeholder { width: 100%; height: 420px; border-radius: 10px; display: grid; place-items: center; background: #F5F7FA; color: #0b4973; text-align: center; padding: 16px; }
 .hv-metrics { display: flex; gap: 16px; margin-top: 10px; }
-.hv-metric { background: #F5F7FA; border: 1px solid #E1E1E1; padding: 10px 12px; border-radius: 10px; display: grid; gap: 4px; min-width: 140px; }
-.hv-metric-label { font-size: 12px; color: #0b4973; text-transform: uppercase; letter-spacing: .6px; }
-.hv-metric-value { font-size: 16px; color: #030922; }
+.hv-metric { background: #DDEEF6; border: 1px solid #9EA8B3; padding: 10px 12px; border-radius: 10px; display: grid; gap: 4px; min-width: 140px; }
+.hv-metric-label { font-size: 12px; color: #015D5F; text-transform: uppercase; letter-spacing: .6px; }
+.hv-metric-value { font-size: 16px; color: #015D5F; }
 
 /* Form */
-.hv-form { margin-top: 18px; background: #fff; border: 1px solid #E1E1E1; border-radius: 12px; padding: 16px; box-shadow: 0 14px 40px rgba(0,0,0,.06); }
+.hv-form { margin-top: 18px; background: #fff; border: 1px solid #9EA8B3; border-radius: 12px; padding: 16px; box-shadow: 0 14px 40px rgba(0,0,0,.06); }
 .hv-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-.hv-field { display: grid; gap: 6px; color: #030922; font-size: 14px; }
+.hv-field { display: grid; gap: 6px; color: #015D5F; font-size: 14px; }
 .hv-label-inline { display: inline-block; margin-bottom: 6px; }
 .hv-span-2 { grid-column: span 2; }
 .hv-checkbox { display: flex; align-items: center; gap: 8px; }
 .hv-actions { display: flex; gap: 10px; margin-top: 14px; }
-.hv-submit { height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid #030922; background: #030922; color: #fff; cursor: pointer; }
-.hv-ghost { height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid #030922; background: transparent; color: #030922; text-decoration: none; display: inline-flex; align-items: center; }
+.hv-submit { height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid #015D5F; background: #015D5F; color: #fff; cursor: pointer; }
+.hv-ghost { height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid #015D5F; background: transparent; color: #015D5F; text-decoration: none; display: inline-flex; align-items: center; }
 .hv-whatsapp { height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid #25D366; background: #25D366; color: #fff; text-decoration: none; display: inline-flex; align-items: center; }
 .hv-success { margin-top: 12px; color: #0a7a3b; }
 
 /* Modal */
 .hv-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.35); z-index: 1200; }
-.hv-modal { position: fixed; left: 50%; top: 20vh; transform: translateX(-50%); width: min(560px, calc(100vw - 32px)); background: #fff; border: 1px solid #E1E1E1; border-radius: 12px; z-index: 1201; box-shadow: 0 18px 60px rgba(0,0,0,.22); }
-.hv-modal-title { margin: 16px; color: #030922; }
-.hv-modal-body { padding: 0 16px 12px; display: grid; gap: 6px; color: #030922; }
+.hv-modal { position: fixed; left: 50%; top: 20vh; transform: translateX(-50%); width: min(560px, calc(100vw - 32px)); background: #fff; border: 1px solid #9EA8B3; border-radius: 12px; z-index: 1201; box-shadow: 0 18px 60px rgba(0,0,0,.22); }
+.hv-modal-title { margin: 16px; color: #015D5F; }
+.hv-modal-body { padding: 0 16px 12px; display: grid; gap: 6px; color: #015D5F; }
 .hv-modal-actions { display: flex; justify-content: flex-end; gap: 10px; padding: 12px 16px 16px; }
 
 /* Responsive */

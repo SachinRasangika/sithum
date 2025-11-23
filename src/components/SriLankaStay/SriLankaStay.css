@@ -1,38 +1,38 @@
 /* Sri Lanka Stays listing - follows existing round + blue style */
-.stays-section { position: relative; width: 100%; background: #ffffff; padding: 100px 0; color: #030922; }
+.stays-section { position: relative; width: 100%; background: #ffffff; padding: 100px 0; color: #015D5F; }
 .stays-container { max-width: 1920px; width: 100%; margin: 0 auto; padding: 0 184px; }
 
 .stays-header { text-align: center; margin-bottom: 40px; }
 .stays-title-wrap { display: flex; justify-content: center; align-items: center; gap: 36px; margin-bottom: 18px; }
 .stays-decorative { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; }
-.stays-title { font-family: 'Georgia', serif; font-size: 46px; font-weight: 400; line-height: 58px; letter-spacing: .2px; color: #030922; margin: 0; }
-.stays-subtitle { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 300; line-height: 28px; letter-spacing: .5px; color: #1b2548; margin: 0 auto; max-width: 720px; }
+.stays-title { font-family: 'Georgia', serif; font-size: 46px; font-weight: 400; line-height: 58px; letter-spacing: .2px; color: #015D5F; margin: 0; }
+.stays-subtitle { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 300; line-height: 28px; letter-spacing: .5px; color: #333333; margin: 0 auto; max-width: 720px; }
 
 /* Contact-like hero elements for stays */
-.stays-badge { display: inline-block; margin: 8px 0 10px; padding: 6px 10px; border-radius: 999px; border: 1px solid #e5e7eb; background: #fff; color: #030922; font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; position: relative; z-index: 1; }
+.stays-badge { display: inline-block; margin: 8px 0 10px; padding: 6px 10px; border-radius: 999px; border: 1px solid #9EA8B3; background: #fff; color: #015D5F; font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; position: relative; z-index: 1; }
 .stays-hero-divider { display: inline-flex; align-items: center; justify-content: center; margin: 6px 0 10px; position: relative; z-index: 1; width: 100%; }
-.stays-divider-line { display: inline-block; width: 140px; height: 1px; background: #030922; opacity: .22; }
-.stays-hero-subtitle { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 300; line-height: 28px; letter-spacing: .5px; color: #1b2548; margin: 0 auto; max-width: 720px; position: relative; z-index: 1; }
+.stays-divider-line { display: inline-block; width: 140px; height: 1px; background: #015D5F; opacity: .22; }
+.stays-hero-subtitle { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 300; line-height: 28px; letter-spacing: .5px; color: #333333; margin: 0 auto; max-width: 720px; position: relative; z-index: 1; }
 
 .stays-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
 
-.stay-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 0 rgba(2,12,60,.02); display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s; }
-.stay-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(2,12,60,.08); }
+.stay-card { background: #ffffff; border: 1px solid #9EA8B3; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 0 rgba(1,93,95,.02); display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s; }
+.stay-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(1,93,95,.08); }
 .stay-media { position: relative; display: block; width: 100%; height: 260px; background: #f6f8fc; overflow: hidden; }
 .stay-media img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
-.stay-chip { position: absolute; left: 14px; bottom: 14px; background: rgba(252, 248, 247, 0.9); color: #030922; font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; padding: 8px 12px; border-radius: 100px; }
+.stay-chip { position: absolute; left: 14px; bottom: 14px; background: rgba(184, 138, 74, 0.9); color: #FFFFFF; font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; padding: 8px 12px; border-radius: 100px; }
 
 .stay-body { padding: 20px; display: flex; flex-direction: column; gap: 10px; }
-.stay-name { margin: 0; font-family: 'Georgia', serif; font-size: 22px; font-weight: 400; line-height: 30px; color: #030922; }
+.stay-name { margin: 0; font-family: 'Georgia', serif; font-size: 22px; font-weight: 400; line-height: 30px; color: #015D5F; }
 .stay-name a { color: inherit; text-decoration: none; }
 .stay-name a:hover { text-decoration: underline; }
-.stay-desc { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 300; line-height: 22px; color: #1b2548; margin: 0; }
+.stay-desc { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 300; line-height: 22px; color: #333333; margin: 0; }
 .stay-tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-.stay-tag { display: inline-flex; align-items: center; justify-content: center; height: 30px; padding: 0 10px; border: 1px solid #e5e7eb; background: #fff; color: #030922; font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: .4px; border-radius: 999px; }
+.stay-tag { display: inline-flex; align-items: center; justify-content: center; height: 30px; padding: 0 10px; border: 1px solid #9EA8B3; background: #fff; color: #015D5F; font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: .4px; border-radius: 999px; }
 
 .stay-actions { display: flex; gap: 10px; margin-top: 6px; }
-.stay-view { display: inline-flex; align-items: center; justify-content: center; height: 44px; padding: 0 18px; background: #030922; color: #FFFFFF; border: 1px solid #030922; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; border-radius: 12px; }
-.stay-view:hover { background: transparent; color: #030922; }
+.stay-view { display: inline-flex; align-items: center; justify-content: center; height: 44px; padding: 0 18px; background: #015D5F; color: #FFFFFF; border: 1px solid #015D5F; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; border-radius: 12px; }
+.stay-view:hover { background: transparent; color: #015D5F; }
 
 /* Responsive */
 @media (max-width: 1440px) { .stays-container { padding: 0 120px; } .stays-grid { gap: 24px; } }

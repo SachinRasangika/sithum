@@ -6,7 +6,7 @@
 
 .contact-hero-section {
   width: 100%;
-  background: #FCF8F7;
+  background: #DDEEF6;
   padding: 80px 20px;
   display: flex;
   justify-content: center;
@@ -28,7 +28,7 @@
   align-items: center;
   border-radius: 100px;
   background: #fff;
-  color: #030922;
+  color: #015D5F;
   font-size: 13px;
   font-weight: 300;
   line-height: 26px;
@@ -47,7 +47,7 @@
 .contact-divider-line {
   width: 100%;
   height: 1px;
-  border-top: 1px solid #D9D9D9;
+  border-top: 1px solid #9EA8B3;
 }
 
 .contact-hero-title {
@@ -56,7 +56,7 @@
   justify-content: center;
   gap: 16px;
   margin: 0;
-  color: #030922;
+  color: #015D5F;
   text-align: center;
   font-family: 'Georgia', serif;
   font-size: clamp(40px, 6vw, 61px);
@@ -72,7 +72,7 @@
 }
 
 .contact-hero-subtitle {
-  color: #030922;
+  color: #015D5F;
   text-align: center;
   font-size: 17px;
   font-weight: 300;
@@ -119,7 +119,7 @@
   justify-content: center;
   gap: 16px;
   margin: 0;
-  color: #030922;
+  color: #015D5F;
   text-align: center;
   font-family: 'Georgia', serif;
   font-size: clamp(36px, 5vw, 50px);
@@ -163,7 +163,7 @@
 }
 
 .contact-form-label {
-  color: #030922;
+  color: #015D5F;
   font-size: 16px;
   font-weight: 300;
   line-height: 26px;
@@ -176,12 +176,12 @@
   width: 100%;
   padding: 12px 0;
   border: none;
-  border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+  border-bottom: 1px solid rgba(158, 168, 179, 0.5);
   background: #fff;
   box-shadow: inset 1px 1px 3px 0 #fff;
   font-family: inherit;
   font-size: 16px;
-  color: #030922;
+  color: #015D5F;
   outline: none;
   transition: border-color 0.2s ease;
 }
@@ -215,7 +215,7 @@
 .contact-budget-slider {
   width: 100%;
   height: 1px;
-  background: #D9D9D9;
+  background: #9EA8B3;
   outline: none;
   appearance: none;
   cursor: pointer;
@@ -361,9 +361,9 @@
 .contact-form-submit {
   width: 250px;
   height: 75px;
-  border: 1px solid rgba(217, 217, 217, 0.5);
+  border: 1px solid rgba(158, 168, 179, 0.5);
   background: transparent;
-  color: #030922;
+  color: #015D5F;
   text-align: center;
   font-family: inherit;
   font-size: 15px;
@@ -375,16 +375,16 @@
 }
 
 .contact-form-submit:hover {
-  background: #030922;
+  background: #015D5F;
   color: #fff;
-  border-color: #030922;
+  border-color: #015D5F;
 }
 
 .contact-divider-vertical {
   width: 1px;
   height: 80px;
-  background: #030922;
-  border-right: 1px solid #030922;
+  background: #015D5F;
+  border-right: 1px solid #015D5F;
 }
 
 .contact-call-section {
@@ -400,7 +400,7 @@
   justify-content: center;
   gap: 16px;
   margin: 0;
-  color: #030922;
+  color: #015D5F;
   text-align: center;
   font-family: 'Georgia', serif;
   font-size: clamp(36px, 5vw, 51px);
@@ -414,8 +414,8 @@
   padding: 21px 80px;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgba(3, 9, 34, 0.5);
-  color: #030922;
+  border: 1px solid rgba(1, 93, 95, 0.5);
+  color: #015D5F;
   text-align: center;
   font-size: 18px;
   font-weight: 300;
@@ -427,9 +427,9 @@
 }
 
 .contact-phone-link:hover {
-  background: #030922;
+  background: #015D5F;
   color: #fff;
-  border-color: #030922;
+  border-color: #015D5F;
 }
 
 @media (max-width: 768px) {
