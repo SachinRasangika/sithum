@@ -199,12 +199,24 @@
 @media (max-width: 768px) {
   .safari-beach-section { padding: 60px 0; min-height: auto; }
   .safari-beach-container { padding: 0 20px; }
+  .safari-beach-layout { gap: 24px; }
   .safari-beach-background { height: 300px; margin: 0 0 30px; }
-  .safari-beach-copy { text-align: left; }
-  .safari-beach-highlights { grid-template-columns: 1fr; }
-  .safari-beach-gallery { gap: 12px; }
-  .gallery-side { grid-auto-rows: 180px; }
-  .safari-beach-badge { width: 140px; height: 140px; right: 8px; bottom: -18px; }
+  .safari-beach-copy { text-align: left; max-width: 100%; }
+  .safari-beach-heading { font-size: 28px; line-height: 36px; margin-bottom: 16px; }
+  .safari-beach-subtext { font-size: 15px; line-height: 24px; }
+  .safari-beach-highlights { grid-template-columns: 1fr; gap: 10px; margin-bottom: 24px; }
+  .highlight-item { gap: 10px; }
+  .highlight-text { font-size: 14px; }
+  .safari-beach-actions { gap: 10px; }
+  .safari-beach-cta-primary, .safari-beach-cta-secondary { height: 48px; padding: 0 20px; font-size: 13px; width: 100%; }
+  .safari-beach-gallery { grid-template-columns: 1fr; gap: 12px; }
+  .gallery-main { grid-column: auto; }
+  .gallery-side { grid-column: auto; grid-auto-rows: 160px; }
+  .gallery-image { border-radius: 12px; }
+  .safari-beach-badge { width: 120px; height: 120px; right: 8px; bottom: -16px; }
+  .badge-content { gap: 2px; }
+  .badge-title { font-size: 14px; }
+  .badge-sub { font-size: 10px; }
 }
 
 /* Extra small mobile */

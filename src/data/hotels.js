@@ -4,7 +4,7 @@ export const hotels = [
     name: 'Ceylon Tea Trails',
     slug: 'ceylon-tea-trails',
     location: 'Hatton, Sri Lanka',
-    image: 'https://api.builder.io/api/v1/image/assets/TEMP/166cc298ca17a9952a4537336b3859e9b6b45870?width=982',
+    image: 'https://images.pexels.com/photos/321570/pexels-photo-321570.jpeg?auto=compress&cs=tinysrgb&w=1200',
     alt: 'Ceylon Tea Trails bungalows',
     description:
       'Iconic Relais & Châteaux bungalows across rolling tea country. Butler service, gourmet dining, and scenic hikes between estates create a refined, old‑world escape.',
@@ -65,7 +65,7 @@ export const hotels = [
     name: 'Chena Huts',
     slug: 'chena-huts',
     location: 'Yala, Sri Lanka',
-    image: 'https://api.builder.io/api/v1/image/assets/TEMP/e020b772f5cd413a57d00578a44a52c9e7de5990?width=982',
+    image: 'https://images.pexels.com/photos/18611231/pexels-photo-18611231.jpeg?auto=compress&cs=tinysrgb&w=1200',
     alt: 'Chena Huts by Uga in Yala',
     description:
       'Luxurious thatched pavilions beside the ocean and jungle. Private plunge pools, exceptional cuisine, and guided game drives in Yala National Park.',
@@ -123,7 +123,7 @@ export const hotels = [
     name: 'Cape Weligama',
     slug: 'cape-weligama',
     location: 'Weligama, Sri Lanka',
-    image: 'https://api.builder.io/api/v1/image/assets/TEMP/b268a185c0ec777789c566afbaf9ef0d849a6cbe?width=982',
+    image: 'https://images.pexels.com/photos/8656377/pexels-photo-8656377.png?auto=compress&cs=tinysrgb&w=1200',
     alt: 'Cape Weligama luxury resort',
     description:
       'Clifftop suites and villas with sweeping bay views. Three pools, a renowned surf break nearby, and sundowner terraces define effortless coastal luxury.',
@@ -168,7 +168,7 @@ export const hotels = [
     name: 'Wild Coast Tented Lodge',
     slug: 'wild-coast-tented-lodge',
     location: 'Yala National Park, Sri Lanka',
-    image: 'https://api.builder.io/api/v1/image/assets/TEMP/81cebc6e2622df4176e4add2fc10f17ec51c30c8?width=3355',
+    image: 'https://images.pexels.com/photos/3155666/pexels-photo-3155666.jpeg?auto=compress&cs=tinysrgb&w=1200',
     alt: 'Wild Coast Tented Lodge in Yala',
     description:
       'A design-led lodge cocooned between jungle and the Indian Ocean, offering unforgettable game drives in Yala alongside beachfront relaxation and exceptional cuisine.',

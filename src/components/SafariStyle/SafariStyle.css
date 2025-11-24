@@ -436,23 +436,26 @@
 @media (max-width: 768px) {
   .safari-style-container { padding: 0 20px; }
   .safari-style-header { flex-direction: column; gap: 10px; margin-bottom: 20px; text-align: center; }
+  .safari-style-icon { width: 24px; height: 24px; }
   .safari-style-title { font-size: 32px; line-height: 40px; }
-  .safari-style-description { font-size: 16px; line-height: 26px; margin-bottom: 60px; text-align: center; }
-  .featured-lodge { height: 400px; margin-bottom: 80px; }
-  .featured-lodge-content { height: 250px; padding: 30px 20px; }
-  .featured-lodge-name { font-size: 22px; line-height: 28px; }
-  .featured-lodge-location { font-size: 14px; margin-bottom: 20px; }
-  .featured-lodge-description { font-size: 14px; line-height: 22px; }
-  .lodge-image-container { height: 300px; }
+  .safari-style-description { font-size: 15px; line-height: 24px; margin-bottom: 50px; text-align: center; }
+  .featured-lodge { height: 380px; margin-bottom: 60px; }
+  .featured-lodge-content { height: 220px; padding: 24px 18px; position: relative; bottom: 0; width: 100%; background: rgba(1, 93, 95, 0.95); }
+  .featured-lodge-name { font-size: 20px; line-height: 26px; margin-bottom: 8px; }
+  .featured-lodge-location { font-size: 12px; margin-bottom: 16px; }
+  .featured-lodge-description { font-size: 13px; line-height: 20px; }
+  .safari-lodges-grid { grid-template-columns: 1fr; gap: 40px; margin-bottom: 40px; }
+  .lodge-image-container { height: 280px; margin-bottom: 8px; }
   .review-badge { bottom: 12px; right: 12px; padding: 4px 10px; width: auto; height: auto; }
-  .review-badge span { font-size: 12px; }
-  .view-button { bottom: 60px; left: 15px; width: 60px; height: 60px; opacity: 1; visibility: visible; pointer-events: auto; }
-  .view-button span { font-size: 11px; }
-  .lodge-name { font-size: 22px; line-height: 28px; }
-  .lodge-location { font-size: 12px; }
-  .view-more-section { flex-direction: column; gap: 15px; margin-bottom: 40px; }
+  .review-badge span { font-size: 11px; }
+  .view-button { bottom: 50px; left: 12px; width: 56px; height: 56px; opacity: 1; visibility: visible; pointer-events: auto; }
+  .view-button span { font-size: 10px; }
+  .lodge-name { font-size: 20px; line-height: 26px; margin-bottom: 6px; }
+  .lodge-location { font-size: 11px; }
+  .lodge-info { padding: 0; }
+  .view-more-section { flex-direction: column; gap: 12px; margin-bottom: 32px; }
   .view-more-divider { width: 100%; max-width: none; }
-  .view-more-button { width: 160px; height: 50px; font-size: 13px; }
+  .view-more-button { width: 100%; max-width: 160px; height: 48px; font-size: 12px; margin: 0 auto; }
 }
 
 /* Hotel Modal */
@@ -480,51 +483,95 @@
 /* Extra small mobile */
 @media (max-width: 480px) {
   .safari-style-container {
-    padding: 0 15px;
+    padding: 0 14px;
   }
-  
+
+  .safari-style-header {
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .safari-style-icon {
+    width: 20px;
+    height: 20px;
+  }
+
   .safari-style-title {
-    font-size: 26px;
-    line-height: 34px;
+    font-size: 24px;
+    line-height: 32px;
   }
-  
+
   .safari-style-description {
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 40px;
+  }
+
+  .featured-lodge {
+    height: 320px;
+    margin-bottom: 50px;
+  }
+
+  .featured-lodge-content {
+    height: 180px;
+    padding: 18px 14px;
+  }
+
+  .featured-lodge-name {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 6px;
+  }
+
+  .featured-lodge-location {
+    font-size: 11px;
+    margin-bottom: 12px;
+  }
+
+  .featured-lodge-description {
+    font-size: 12px;
+    line-height: 18px;
+    max-width: 100%;
+  }
+
+  .lodge-image-container {
+    height: 220px;
+  }
+
+  .review-badge {
+    bottom: 10px;
+    right: 10px;
+    padding: 3px 8px;
+  }
+
+  .review-badge span {
+    font-size: 10px;
+  }
+
+  .view-button {
+    bottom: 40px;
+    left: 10px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .view-button span {
+    font-size: 9px;
+  }
+
+  .lodge-name {
+    font-size: 18px;
     line-height: 24px;
   }
-  
-  .featured-lodge {
-    height: 350px;
-    margin-bottom: 60px;
+
+  .lodge-location {
+    font-size: 10px;
   }
-  
-  .featured-lodge-content {
-    height: 200px;
-    padding: 20px 15px;
-  }
-  
-  .featured-lodge-name {
-    font-size: 20px;
-    line-height: 26px;
-  }
-  
-  .featured-lodge-description {
-    font-size: 13px;
-    line-height: 20px;
-  }
-  
-  .lodge-image-container {
-    height: 250px;
-  }
-  
-  .lodge-name {
-    font-size: 20px;
-    line-height: 26px;
-  }
-  
+
   .view-more-button {
-    width: 140px;
-    height: 45px;
-    font-size: 12px;
+    width: 100%;
+    max-width: 140px;
+    height: 44px;
+    font-size: 11px;
   }
 }

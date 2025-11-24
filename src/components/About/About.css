@@ -10,5 +10,21 @@
 
 @media (max-width:1440px){ .about-content{padding:0 120px;} .about-title{font-size:36px;line-height:46px;} }
 @media (max-width:1024px){ .about-content{padding:0 60px;} .about-title{font-size:32px;line-height:42px;margin-bottom:40px;} .about-badges{gap:20px;} .badge{width:180px;height:180px;} }
-@media (max-width:768px){ .about-section{padding:80px 0;} .about-content{padding:0 20px;} .about-logo{width:80px;height:60px;margin-bottom:30px;} .about-title{font-size:24px;line-height:32px;margin-bottom:30px;} .about-badges{flex-direction:column;gap:20px;} .about-badges::before{display:none;} .badge{width:150px;height:150px;} }
-@media (max-width:480px){ .about-content{padding:0 15px;} .about-title{font-size:20px;line-height:28px;} .about-logo{width:60px;height:45px;} .badge{width:120px;height:120px;} }
+@media (max-width:768px) {
+  .about-section { padding: 60px 0; min-height: auto; }
+  .about-content { padding: 0 20px; }
+  .about-logo { width: 80px; height: 60px; margin-bottom: 24px; }
+  .about-title { font-size: 28px; line-height: 36px; margin-bottom: 32px; }
+  .about-badges { flex-direction: column; gap: 16px; margin-top: 20px; }
+  .about-badges::before { display: none; }
+  .badge { width: 140px; height: 140px; }
+}
+
+@media (max-width: 480px) {
+  .about-section { padding: 40px 0; }
+  .about-content { padding: 0 15px; }
+  .about-logo { width: 70px; height: 50px; margin-bottom: 20px; }
+  .about-title { font-size: 22px; line-height: 30px; margin-bottom: 24px; }
+  .about-badges { gap: 12px; }
+  .badge { width: 110px; height: 110px; }
+}

@@ -192,10 +192,74 @@ input:focus, select:focus, textarea:focus { outline: none; box-shadow: 0 0 0 3px
 }
 
 @media (max-width: 768px) {
+  .pkg-hero { height: clamp(280px, 40vw, 400px); }
   .pkg-hero-content { padding: 32px 20px 40px; }
   .pkg-title { font-size: clamp(28px, 4.5vw, 38px); }
-  .pkg-summary { font-size: 15px; }
+  .pkg-summary { font-size: 15px; margin-bottom: 18px; }
   .pkg-breadcrumbs { top: 16px; left: 16px; right: 16px; max-width: calc(100% - 32px); font-size: 12px; }
+  .pkg-main { padding: 0 16px; margin: 24px auto; }
+  .pkg-hero-meta { gap: 10px; }
+  .chip { padding: 8px 12px; font-size: 12px; }
+  .pkg-gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .pkg-highlight-item::before { font-size: 16px; }
+  .form-row { grid-template-columns: 1fr; }
+  .enquiry-form { gap: 12px; }
+  .form-actions { flex-direction: column; }
+  .btn { width: 100%; }
+  .pkg-sticky-mobile { display: flex; }
+}
+
+@media (max-width: 480px) {
+  .pkg-hero { height: clamp(240px, 50vw, 320px); }
+  .pkg-hero-content { padding: 24px 16px 32px; }
+  .pkg-title { font-size: clamp(24px, 4vw, 32px); }
+  .pkg-summary { font-size: 14px; }
+  .pkg-kicker { font-size: 11px; margin-bottom: 10px; }
+  .pkg-hero-meta { flex-direction: column; align-items: flex-start; }
+  .chip { padding: 6px 10px; font-size: 11px; }
+  .pkg-main { padding: 0 12px; margin: 20px auto; }
+  .section-title { font-size: clamp(20px, 2.4vw, 26px); }
+  .pkg-overview-grid { gap: 18px; }
+  .pkg-highlights { grid-template-columns: 1fr; gap: 8px 16px; }
+  .pkg-overview-right { grid-template-columns: 1fr; gap: 10px; }
+  .pkg-gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .pkg-gallery-item.span-2 { grid-column: span 1; grid-row: span 1; }
+  .pkg-gallery-item.span-2 .pkg-gallery-img { aspect-ratio: 4 / 3; }
+  .gallery-lightbox-img { max-height: calc(90vh - 100px); }
+  .gallery-lightbox-nav { width: 40px; height: 40px; }
+  .gallery-lightbox-nav svg { width: 20px; height: 20px; }
+  .gallery-lightbox-counter { font-size: 12px; padding: 6px 12px; }
+  .pkg-steps::before { left: 10px; }
+  .pkg-step { padding: 14px 14px 14px 36px; }
+  .pkg-step::before { left: 5px; top: 16px; width: 12px; height: 12px; }
+  .step-day { padding: 4px 8px; font-size: 11px; }
+  .step-title { font-size: 16px; }
+  .step-loc { font-size: 12px; }
+  .step-desc { font-size: 13px; line-height: 1.6; }
+  .pkg-stays-grid { gap: 12px; }
+  .stay-media img { height: 200px; }
+  .stay-title { font-size: 14px; margin-bottom: 6px; }
+  .stay-features li { font-size: 12px; }
+  .reviews-grid { gap: 12px; }
+  .review-card { padding: 16px; }
+  .review-card::before { font-size: 36px; }
+  .pkg-chips { gap: 6px; }
+  .chip-outline { padding: 6px 10px; font-size: 12px; }
+  .pkg-accordion { gap: 10px; }
+  .pkg-acc-header { padding: 12px 14px; font-size: 14px; }
+  .pkg-acc-panel > p { padding: 0 14px 12px; font-size: 13px; }
+  .tour-info-grid { grid-template-columns: 1fr; gap: 10px; }
+  .tour-info-item { padding: 10px; }
+  .enquiry-form { gap: 10px; }
+  .form-field { gap: 4px; }
+  input, select, textarea { height: 40px; padding: 0 10px; font-size: 13px; }
+  textarea { padding: 10px; }
+  label { font-size: 11px; }
+  .form-actions { gap: 8px; }
+  .form-note { margin-top: 8px; font-size: 11px; }
+  .pkg-sticky-mobile { padding: 8px; gap: 8px; }
+  .gallery-lightbox-thumbnails { gap: 6px; padding: 8px; }
+  .gallery-lightbox-thumb { width: 60px; height: 60px; }
 }
 
 @media (max-width: 640px) {

@@ -260,61 +260,63 @@
   .testimonials-section {
     padding: 60px 15px;
   }
-  
+
   .section-header {
     margin-bottom: 60px;
-    flex-direction: column;
-    gap: 20px;
   }
-  
-  .decorative-arrow-left,
-  .decorative-arrow-right {
-    position: static;
-    transform: none;
-  }
-  
+
   .section-title {
     font-size: 32px;
     line-height: 40px;
-    order: 2;
   }
-  
-  .decorative-arrow-left {
-    order: 1;
-  }
-  
+
+  .decorative-arrow-left,
   .decorative-arrow-right {
-    order: 3;
+    display: none;
   }
-  
+
+  .testimonials-list {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
   .testimonial-card {
+    border-right: none;
+    border-bottom: 1px solid #D9D9D9;
+    height: auto;
     padding: 30px 20px;
   }
-  
+
+  .testimonial-card:last-child {
+    border-bottom: none;
+  }
+
   .testimonial-stars {
     margin-bottom: 30px;
   }
-  
+
   .testimonial-text {
     font-size: 16px;
     line-height: 26px;
     margin-bottom: 25px;
+    max-width: 100%;
   }
-  
+
   .testimonial-name {
     font-size: 24px;
     line-height: 30px;
   }
-  
+
   .testimonials-navigation {
     margin-top: 60px;
   }
-  
+
   .nav-button {
     width: 50px;
     height: 50px;
+    min-height: 50px;
   }
-  
+
   .nav-button svg {
     width: 14px;
     height: 8px;

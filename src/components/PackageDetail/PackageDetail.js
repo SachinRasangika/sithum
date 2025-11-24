@@ -70,11 +70,11 @@ export default function PackageDetail() {
     ],
     gallery: [
       base.heroImage,
-      'https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=2080&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2080&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=2080&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1519567241046-7f570eee3da3?q=80&w=2080&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1500534311731-49301a39d7dc?q=80&w=2080&auto=format&fit=crop'
+      'https://images.pexels.com/photos/999068/pexels-photo-999068.jpeg',
+      'https://images.pexels.com/photos/322437/pexels-photo-322437.jpeg',
+      'https://images.pexels.com/photos/32326657/pexels-photo-32326657.jpeg',
+      'https://images.pexels.com/photos/2403209/pexels-photo-2403209.jpeg',
+      'https://images.pexels.com/photos/330260/pexels-photo-330260.jpeg'
     ],
     itinerary: [
       {
@@ -166,11 +166,11 @@ export default function PackageDetail() {
       d.gallery = [
         'https://images.pexels.com/photos/999068/pexels-photo-999068.jpeg',
         'https://images.pexels.com/photos/322437/pexels-photo-322437.jpeg',
-        'https://images.pexels.com/photos/319879/pexels-photo-319879.jpeg',
+        'https://images.pexels.com/photos/23506593/pexels-photo-23506593.jpeg',
         'https://images.pexels.com/photos/2403209/pexels-photo-2403209.jpeg',
-        'https://images.pexels.com/photos/33130315/pexels-photo-33130315.jpeg',
+        'https://images.pexels.com/photos/32964277/pexels-photo-32964277.jpeg',
         'https://images.pexels.com/photos/330260/pexels-photo-330260.jpeg',
-        'https://images.pexels.com/photos/12122565/pexels-photo-12122565.jpeg'
+        'https://images.pexels.com/photos/34218649/pexels-photo-34218649.jpeg'
       ];
       d.itinerary = [
         {
@@ -263,13 +263,13 @@ export default function PackageDetail() {
         }
       ];
       d.gallery = [
-        'https://upload.wikimedia.org/wikipedia/commons/9/97/Negombo_Beach%2C_Sri_Lanka.jpg',
-        'https://upload.wikimedia.org/wikipedia/commons/e/e1/Pinnawala_elephant_orphanage.jpg',
-        'https://upload.wikimedia.org/wikipedia/commons/5/51/Sigiriya_Rock_fortress.jpg',
-        'https://upload.wikimedia.org/wikipedia/commons/0/0b/Dambulla_Cave_temple.jpg',
-        'https://upload.wikimedia.org/wikipedia/commons/2/2f/Peradeniya_Botanical_garden.jpg',
-        'https://upload.wikimedia.org/wikipedia/commons/e/e9/Tea_Estate_Nuwara_Eliya.jpg',
-        'https://live.staticflickr.com/65535/50009234931_1a80fb78d1_c.jpg'
+        'https://images.pexels.com/photos/33916880/pexels-photo-33916880.jpeg',
+        'https://images.pexels.com/photos/33171704/pexels-photo-33171704.jpeg',
+        'https://images.pexels.com/photos/999068/pexels-photo-999068.jpeg',
+        'https://images.pexels.com/photos/32547985/pexels-photo-32547985.jpeg',
+        'https://images.pexels.com/photos/322437/pexels-photo-322437.jpeg',
+        'https://images.pexels.com/photos/23506593/pexels-photo-23506593.jpeg',
+        'https://images.pexels.com/photos/16508229/pexels-photo-16508229.jpeg'
       ];
     }
     if (base.id === 'sl-5day-holiday') {
@@ -313,36 +313,33 @@ export default function PackageDetail() {
         }
       ];
       d.gallery = [
-        'https://upload.wikimedia.org/wikipedia/commons/5/51/Sigiriya_Rock_fortress.jpg',
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Sigiriya_Rock_fortress.jpg/1024px-Sigiriya_Rock_fortress.jpg',
-        'https://upload.wikimedia.org/wikipedia/commons/0/0b/Dambulla_Cave_temple.jpg',
-        'https://upload.wikimedia.org/wikipedia/commons/e/e1/Pinnawala_elephant_orphanage.jpg',
-        'https://upload.wikimedia.org/wikipedia/commons/9/97/Negombo_Beach%2C_Sri_Lanka.jpg',
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Kandy_Temple_of_the_Tooth%2C_Sri_Lanka.jpg/1024px-Kandy_Temple_of_the_Tooth%2C_Sri_Lanka.jpg',
-        'https://upload.wikimedia.org/wikipedia/commons/2/2f/Peradeniya_Botanical_garden.jpg',
-        'https://upload.wikimedia.org/wikipedia/commons/e/e9/Tea_Estate_Nuwara_Eliya.jpg',
-        'https://live.staticflickr.com/65535/50009234931_1a80fb78d1_c.jpg',
-        'https://upload.wikimedia.org/wikipedia/commons/8/8f/Gangaramaya_temple%2C_captured_at_Colombo_City_Center.jpg'
+        'https://images.pexels.com/photos/999068/pexels-photo-999068.jpeg',
+        'https://images.pexels.com/photos/33171704/pexels-photo-33171704.jpeg',
+        'https://images.pexels.com/photos/322437/pexels-photo-322437.jpeg',
+        'https://images.pexels.com/photos/23506593/pexels-photo-23506593.jpeg',
+        'https://images.pexels.com/photos/16508229/pexels-photo-16508229.jpeg',
+        'https://images.pexels.com/photos/2239999/pexels-photo-2239999.jpeg',
+        'https://images.pexels.com/photos/32326657/pexels-photo-32326657.jpeg'
       ];
       d.accommodations = [
         {
           name: 'Tropical Life Resort & Spa',
-          image: 'https://upload.wikimedia.org/wikipedia/commons/5/51/Sigiriya_Rock_fortress.jpg',
+          image: 'https://images.pexels.com/photos/999068/pexels-photo-999068.jpeg',
           features: ['Sigiriya location', 'Pool & Spa', 'Traditional dining']
         },
         {
           name: 'Hotel Topaz',
-          image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Kandy_Temple_of_the_Tooth%2C_Sri_Lanka.jpg/1024px-Kandy_Temple_of_the_Tooth%2C_Sri_Lanka.jpg',
+          image: 'https://images.pexels.com/photos/322437/pexels-photo-322437.jpeg',
           features: ['Kandy location', 'City views', 'Restaurant']
         },
         {
           name: 'Araliya Red',
-          image: 'https://upload.wikimedia.org/wikipedia/commons/e/e9/Tea_Estate_Nuwara_Eliya.jpg',
+          image: 'https://images.pexels.com/photos/23506593/pexels-photo-23506593.jpeg',
           features: ['Nuwara Eliya', 'Tea country views', 'Cozy ambiance']
         },
         {
           name: 'The Palms',
-          image: 'https://live.staticflickr.com/65535/50009234931_1a80fb78d1_c.jpg',
+          image: 'https://images.pexels.com/photos/16508229/pexels-photo-16508229.jpeg',
           features: ['Bentota beach', 'Water sports', 'Oceanfront']
         }
       ];

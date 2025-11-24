@@ -1,10 +1,27 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif; background-color: #ffffff; }
+body {
+  font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 .App { min-height: 100vh; }
 .skip-link { position: absolute; left: -999px; top: -999px; }
 .skip-link:focus { left: 16px; top: 16px; background: #015D5F; color: #fff; padding: 8px 12px; border-radius: 4px; }
 .navbar-fixed-spacer { height: 154px; }
+
+@media (max-width: 1024px) {
+  .navbar-fixed-spacer { height: 140px; }
+}
+
+@media (max-width: 768px) {
+  .navbar-fixed-spacer { height: 130px; }
+}
+
+@media (max-width: 480px) {
+  .navbar-fixed-spacer { height: 120px; }
+}
 
 /* Navbar Styles */
 .navbar {
@@ -598,68 +615,77 @@ body { font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif; backg
 /* Mobile Styles */
 @media (max-width: 768px) {
   .navbar-top-content {
-    padding: 0 15px;
+    padding: 12px 15px;
+    min-height: 70px;
   }
-  
+
   .navbar-bottom {
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
-  
+
   .navbar-bottom-content {
     padding: 0 15px;
     justify-content: flex-start;
     min-width: max-content;
+    height: 50px;
   }
-  
+
   .nav-links {
-    gap: 30px;
-  }
-  
-  .navbar-left {
-    gap: 12px;
-  }
-  
-  .logo-icons {
     gap: 20px;
   }
-  
+
+  .navbar-left {
+    gap: 8px;
+  }
+
+  .logo-icons {
+    gap: 16px;
+  }
+
   .hamburger-icon {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
   }
-  
+
   .main-logo {
-    width: 36px;
-    height: 36px;
-  }
-  
-  .logo-icon {
-    width: 16px;
-    height: 14px;
-  }
-  
-  .search-button {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .enquire-button {
-    min-width: 120px;
-    height: 50px;
-    padding: 8px 8px 8px 14px;
-  }
-  
-  .enquire-button span {
-    font-size: 13px;
-  }
-  
-  .enquire-button svg {
     width: 32px;
     height: 32px;
   }
-  
+
+  .logo-icon {
+    width: 14px;
+    height: 12px;
+  }
+
+  .search-button {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+  }
+
+  .enquire-button {
+    min-width: 110px;
+    height: 48px;
+    padding: 6px 6px 6px 12px;
+  }
+
+  .enquire-button span {
+    font-size: 12px;
+    letter-spacing: 0.6px;
+  }
+
+  .enquire-button svg {
+    width: 28px;
+    height: 28px;
+  }
+
   .nav-item span {
-    font-size: 13px;
+    font-size: 12px;
+    letter-spacing: 0.6px;
   }
 
   .hero-section {
@@ -765,57 +791,74 @@ body { font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif; backg
 /* Extra small mobile */
 @media (max-width: 480px) {
   .navbar-top-content {
-    padding: 0 10px;
+    padding: 10px 12px;
+    min-height: 60px;
   }
-  
+
+  .navbar-bottom-content {
+    padding: 0 12px;
+    height: 45px;
+  }
+
   .navbar-left {
-    gap: 8px;
+    gap: 6px;
   }
-  
+
   .logo-icons {
-    gap: 15px;
+    gap: 12px;
   }
-  
+
   .navbar-right {
-    gap: 5px;
+    gap: 4px;
   }
-  
+
   .search-button {
-    width: 45px;
-    height: 45px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
   }
-  
+
   .enquire-button {
-    min-width: 100px;
-    height: 45px;
-    padding: 6px 6px 6px 12px;
+    min-width: 95px;
+    height: 44px;
+    padding: 5px 5px 5px 10px;
   }
-  
+
   .enquire-button span {
-    font-size: 12px;
+    font-size: 11px;
+    letter-spacing: 0.5px;
   }
-  
+
   .enquire-button svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .hamburger-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .main-logo {
     width: 28px;
     height: 28px;
   }
-  
-  .hamburger-icon {
-    width: 45px;
-    height: 45px;
+
+  .logo-icon {
+    width: 12px;
+    height: 10px;
   }
-  
-  .main-logo {
-    width: 32px;
-    height: 32px;
-  }
-  
+
   .nav-links {
-    gap: 20px;
+    gap: 15px;
   }
-  
+
   .nav-item span {
-    font-size: 12px;
+    font-size: 11px;
+    letter-spacing: 0.5px;
   }
 
   .hero-title {
